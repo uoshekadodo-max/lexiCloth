@@ -109,7 +109,6 @@ function renderCart(cart) {
             >
                 +
             </button>
-
         </div>
 
         <button
@@ -118,7 +117,7 @@ function renderCart(cart) {
             data-size="${product.size ?? ""}"
 data-color="${product.color ?? ""}"
         >
-            Remove
+            REMOVE
         </button>
 
     </div>
