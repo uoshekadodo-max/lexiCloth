@@ -121,7 +121,6 @@ data-color="${product.color ?? ""}"
         </button>
 
     </div>
-
 </div>
 
 `;
@@ -147,8 +146,6 @@ checkoutButton.addEventListener("click", () => {
     window.location.href = "checkout.html";
 
 });
-
-
 function attachEvents() {
 
     
