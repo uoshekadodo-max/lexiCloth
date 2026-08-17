@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/components/footer.css">
+<link rel="stylesheet" href="/css/pages/home.css">
+<link rel="stylesheet" href="/css/components/slider.css">
+    <link rel="stylesheet" href="/css/pages/wishlist.css">
+   
+    <title>WishList Pag</title>
+</head>
+<body>
+    <div id="navbar"></div>
+
+
+<section class="wishlist-hero">
+
+    <div class="wishlist-hero-content">
+
+        <span class="wishlist-small-title">
+
+            LEXICLOTH
+
+        </span>
+
+        <h1>
+
+            My Wishlist
+
+        </h1>
+
+        <p>
+
+            Save your favourite luxury fashion pieces and come back anytime.
+
+        </p>
+
+        <div class="wishlist-counter">
+
+            <span id="wishlistCount">
+
+                0
+
+            </span>
+
+            Saved Items
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <main class="wishlist-page">
+
+    <section class="wishlist-header">
+
+        <h1>My Wishlist</h1>
+
+        <button id="clearWishlist">
+            Clear Wishlist
+        </button>
+
+    </section>
+
+    <div id="wishlistContainer">
+
+    </div>
+
+    <div id="wishlistEmpty" class="empty-state">
+
+        <i class="fa-regular fa-heart"></i>
+
+        <h2>Your wishlist is empty</h2>
+
+        <p>
+            Save your favourite products here.
+        </p>
+
+        <a href="shop.html" class="btn">
+            Continue Shopping
+        </a>
+
+    </div>
+</main>
+
+
+<section class="theSlider">
+
+    <div class="sectionhead">
+
+        <h4>Recently Viewed</h4>
+
+        <a href="shop.html">View All</a>
+
+    </div>
+
+    <div class="slidercontainer">
+
+        <button class="sliderbtn prev" id="recentPrev">
+
+            &#10094;
+
+        </button>
+
+        <div class="slider-wrapper" id="recentWrapper">
+
+            <div class="slider-track" id="recentContainer">
+
+            </div>
+
+        </div>
+
+        <button class="sliderbtn next" id="recentNext">
+
+            &#10095;
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="recommended-section">
+
+    <div class="sectionhead">
+
+        <h4>Recommended For You</h4>
+
+        <a href="shop.html">View All</a>
+
+    </div>
+
+    <div class="slidercontainer">
+
+        <button
+            class="sliderbtn prev"
+            id="recommendedPrev"
+        >
+
+            &#10094;
+
+        </button>
+
+        <div
+            class="slider-wrapper"
+            id="recommendedWrapper"
+        >
+
+            <div
+                class="slider-track"
+                id="recommendedContainer"
+            ></div>
+
+        </div>
+
+        <button
+            class="sliderbtn next"
+            id="recommendedNext"
+        >
+
+            &#10095;
+
+        </button>
+
+    </div>
+
+</section>
+
+<div id="footer"></div>
+
+
+    <script  type="module" src="/js/pages/whislistPage.js"></script>
+
+     <script type="module" src="/js/components/loadNavbar.js"></script>
+
+         <script
+    type="module"
+    src="/js/components/loadFooter.js"
+></script>
+</main>
+</body>
+</html>

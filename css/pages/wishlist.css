@@ -1,0 +1,403 @@
+.wishlist-page{
+
+    width:min(1400px,95%);
+
+    margin:40px auto;
+
+}
+
+
+
+
+.wishlist-icon{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:#f8f8f8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.wishlist-icon i{
+
+    font-size:55px;
+
+    color:#550202;
+
+}
+
+.wishlist-empty:hover .wishlist-icon{
+
+    transform:scale(1.08);
+
+}
+
+.wishlist-empty h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+.wishlist-empty p{
+
+    max-width:420px;
+
+    line-height:1.8;
+
+    color:#777;
+
+    margin-bottom:30px;
+
+}
+
+.wishlist-shop-btn{
+
+    background:#550202;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.wishlist-shop-btn:hover{
+
+    background:#330101;
+
+    transform:translateY(-3px);
+
+}
+
+
+.wishlist-hero{
+
+    background:linear-gradient(
+        135deg,
+        #550202,
+        #2a0000
+    );
+
+    color:white;
+
+    border-radius:25px;
+
+    padding:70px 40px;
+
+    margin-bottom:45px;
+
+}
+
+.wishlist-small-title{
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+    opacity:.8;
+
+}
+
+.wishlist-hero h1{
+
+    font-size:55px;
+
+    margin:15px 0;
+
+}
+
+.wishlist-hero p{
+
+    max-width:520px;
+
+    opacity:.9;
+
+    line-height:1.8;
+
+}
+
+.wishlist-counter{
+
+    margin-top:35px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    padding:14px 24px;
+
+    border-radius:50px;
+
+}
+
+#wishlistCount{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+#wishlistContainer{
+    display:grid !important;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr)) !important;
+    gap:20px !important;
+}
+
+.wishlist-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.wishlist-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+
+}
+
+.wishlist-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.wishlist-image img{
+
+    width:100%;
+
+    height:370px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.wishlist-card:hover img{
+
+    transform:scale(1.08);
+
+}
+.wishlist-info{
+
+    padding:25px;
+
+}
+
+.wishlist-brand{
+
+    color:#888;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:12px;
+
+}
+
+.wishlist-info h3{
+
+    margin:10px 0;
+
+    font-size:22px;
+
+    line-height:1.5;
+
+}
+.wishlist-price{
+
+    font-size:30px;
+
+    color:#550202;
+
+    font-weight:700;
+
+    margin:20px 0;
+
+}
+
+.wishlist-rating{
+
+    display:flex;
+
+    gap:6px;
+
+    align-items:center;
+
+    color:#666;
+
+}
+
+.move-cart-btn{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#550202;
+
+    color:#fff;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.move-cart-btn:hover{
+
+    background:#330101;
+
+}
+
+.wishlist-bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    margin-top:18px;
+
+}
+
+.view-btn,
+.remove-btn{
+
+    flex:1;
+
+    height:45px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+@keyframes heartPop{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    30%{
+
+        transform:scale(1.45) rotate(-15deg);
+
+    }
+
+    60%{
+
+        transform:scale(.9);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+
+
+
+.cart-btn,
+.view-btn{
+
+    transition:
+
+        .35s;
+
+}
+
+.cart-btn:hover,
+.view-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/*==============================
+    EMPTY WISHLIST
+==============================*/
+
+.wishlist-empty{
+
+    min-height:65vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+

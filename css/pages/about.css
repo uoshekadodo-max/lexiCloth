@@ -1,0 +1,1811 @@
+/* =========================================================
+   LEXICLOTH — ABOUT PAGE
+   PART 1 — HERO
+========================================================= */
+
+.about-page {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-hero {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 90px 7%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #faf6f6 52%,
+            #f2e9e9 100%
+        );
+
+    isolation: isolate;
+
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+.about-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -230px;
+
+    right: -170px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(85, 2, 2, 0.065);
+
+    z-index: -1;
+
+}
+
+
+.about-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    left: -170px;
+
+    bottom: -180px;
+
+    border: 1px solid
+        rgba(85, 2, 2, 0.13);
+
+    border-radius: 50%;
+
+    z-index: -1;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-hero-content {
+
+    width: min(780px, 100%);
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about-eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #550202;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-hero h1 {
+
+    margin: 0;
+
+    color: #171717;
+
+    font-size: clamp(
+        46px,
+        7vw,
+        82px
+    );
+
+    font-weight: 850;
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+}
+
+
+.about-hero h1 span {
+
+    display: block;
+
+    color: #550202;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-hero p {
+
+    max-width: 650px;
+
+    margin: 27px auto 0;
+
+    color: #686868;
+
+    font-size: 16px;
+
+    line-height: 1.85;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.about-hero-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    margin-top: 34px;
+
+    padding: 0 28px;
+
+    border-radius: 999px;
+
+    background: #550202;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    box-shadow:
+        0 12px 28px
+        rgba(85, 2, 2, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.about-hero-btn:hover {
+
+    transform: translateY(-3px);
+
+    background: #3f0101;
+
+    box-shadow:
+        0 16px 34px
+        rgba(85, 2, 2, 0.25);
+
+}
+
+
+/* =========================================================
+   BRAND MARK
+========================================================= */
+
+.about-hero-mark {
+
+    position: absolute;
+
+    right: 7%;
+
+    bottom: 12%;
+
+    width: 125px;
+
+    height: 125px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid
+        rgba(85, 2, 2, 0.15);
+
+    border-radius: 50%;
+
+    color: rgba(85, 2, 2, 0.3);
+
+}
+
+
+.about-hero-mark span {
+
+    font-size: 25px;
+
+    font-weight: 850;
+
+    letter-spacing: 3px;
+
+}
+
+
+.about-hero-mark small {
+
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+
+        min-height: 500px;
+
+        padding: 75px 6%;
+
+    }
+
+
+    .about-hero-mark {
+
+        right: 5%;
+
+        bottom: 7%;
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+
+    .about-hero-mark span {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-hero {
+
+        min-height: 480px;
+
+        padding: 65px 20px;
+
+    }
+
+
+    .about-hero h1 {
+
+        font-size: 46px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .about-hero p {
+
+        font-size: 14px;
+
+        line-height: 1.75;
+
+    }
+
+
+    .about-hero-btn {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+
+    .about-hero-mark {
+
+        display: none;
+
+    }
+
+}
+
+/* =========================================================
+   PART 2 — OUR STORY
+========================================================= */
+
+.about-story {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: 80px;
+
+    align-items: center;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 110px 7%;
+
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.about-story-visual {
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   STORY FRAME
+========================================================= */
+
+.story-frame {
+
+    position: relative;
+
+    width: min(390px, 100%);
+
+    aspect-ratio: 4 / 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #550202,
+            #2d0101
+        );
+
+    box-shadow:
+        0 25px 60px
+        rgba(85, 2, 2, 0.20);
+
+    overflow: hidden;
+
+}
+
+
+/* Decorative circles */
+
+.story-frame::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    top: -130px;
+
+    right: -110px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 50%;
+
+}
+
+
+.story-frame::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+
+    height: 210px;
+
+    bottom: -100px;
+
+    left: -80px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 50%;
+
+}
+
+
+/* Main initials */
+
+.story-initial {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        60px,
+        8vw,
+        100px
+    );
+
+    font-weight: 850;
+
+    letter-spacing: 8px;
+
+}
+
+
+/* Year */
+
+.story-year {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 12px;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-story-content {
+
+    max-width: 620px;
+
+}
+
+
+.about-story-content h2 {
+
+    margin: 0;
+
+    color: #171717;
+
+    font-size: clamp(
+        36px,
+        5vw,
+        58px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+}
+
+
+.about-story-content h2 span {
+
+    display: block;
+
+    color: #550202;
+
+}
+
+
+.about-story-content p {
+
+    margin: 20px 0 0;
+
+    color: #686868;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.story-signature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 32px;
+
+    color: #550202;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.signature-line {
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #550202;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .about-story {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 85px 6%;
+
+    }
+
+
+    .about-story-visual {
+
+        min-height: auto;
+
+    }
+
+
+    .story-frame {
+
+        width: min(
+            380px,
+            80%
+        );
+
+    }
+
+
+    .about-story-content {
+
+        max-width: 700px;
+
+        margin: 0 auto;
+
+        text-align: center;
+
+    }
+
+
+    .story-signature {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-story {
+
+        padding: 70px 20px;
+
+        gap: 38px;
+
+    }
+
+
+    .story-frame {
+
+        width: 100%;
+
+        max-width: 300px;
+
+    }
+
+
+    .about-story-content h2 {
+
+        font-size: 38px;
+
+        letter-spacing: -1.5px;
+
+    }
+
+
+    .about-story-content p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+    }
+
+}
+
+
+/* =========================================================
+   PART 3 — WHAT LEXICLOTH STANDS FOR
+========================================================= */
+
+.about-values {
+
+    padding: 110px 7%;
+
+    background: #faf7f7;
+
+    border-top: 1px solid
+        rgba(85, 2, 2, 0.06);
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-values-heading {
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+}
+
+
+.about-values-heading h2 {
+
+    margin: 0;
+
+    color: #171717;
+
+    font-size: clamp(
+        36px,
+        5vw,
+        58px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+}
+
+
+.about-values-heading h2 span {
+
+    display: block;
+
+    color: #550202;
+
+}
+
+
+.about-values-heading p {
+
+    max-width: 590px;
+
+    margin: 20px auto 0;
+
+    color: #6c6c6c;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   VALUES GRID
+========================================================= */
+
+.about-values-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   VALUE CARD
+========================================================= */
+
+.about-value-card {
+
+    position: relative;
+
+    min-height: 310px;
+
+    padding: 30px 25px;
+
+    border: 1px solid
+        rgba(85, 2, 2, 0.08);
+
+    border-radius: 17px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.about-value-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(85, 2, 2, 0.18);
+
+    box-shadow:
+        0 20px 40px
+        rgba(0, 0, 0, 0.07);
+
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.value-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    color:
+        rgba(85, 2, 2, 0.10);
+
+    font-size: 34px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.value-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    border-radius: 12px;
+
+    background: #550202;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(85, 2, 2, 0.15);
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.about-value-card h3 {
+
+    margin: 0;
+
+    color: #202020;
+
+    font-size: 18px;
+
+    font-weight: 750;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-value-card p {
+
+    margin: 13px 0 0;
+
+    color: #707070;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .about-values {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .about-values-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .about-values {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .about-values-heading {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .about-values-heading h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .about-values-heading p {
+
+        font-size: 14px;
+
+    }
+
+
+    .about-values-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .about-value-card {
+
+        min-height: auto;
+
+        padding: 27px 22px;
+
+    }
+
+}
+
+
+/* =========================================================
+   PART 4 — THE LEXICLOTH EXPERIENCE
+========================================================= */
+
+.about-experience {
+
+    padding: 110px 7%;
+
+    background: #ffffff;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-experience-heading {
+
+    max-width: 720px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+
+.about-experience-heading h2 {
+
+    margin: 0;
+
+    color: #171717;
+
+    font-size: clamp(
+        36px,
+        5vw,
+        58px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+}
+
+
+.about-experience-heading h2 span {
+
+    display: block;
+
+    color: #550202;
+
+}
+
+
+.about-experience-heading p {
+
+    max-width: 600px;
+
+    margin: 20px auto 0;
+
+    color: #6c6c6c;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.experience-timeline {
+
+    position: relative;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+
+/* Vertical line */
+
+.experience-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+
+    bottom: 20px;
+
+    left: 31px;
+
+    width: 1px;
+
+    background:
+        rgba(85, 2, 2, 0.16);
+
+}
+
+
+/* =========================================================
+   STEP
+========================================================= */
+
+.experience-step {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 64px 1fr;
+
+    gap: 30px;
+
+    min-height: 170px;
+
+}
+
+
+/* =========================================================
+   MARKER
+========================================================= */
+
+.experience-marker {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 62px;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid
+        rgba(85, 2, 2, 0.18);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+}
+
+
+.experience-marker span {
+
+    color: #550202;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.experience-content {
+
+    padding: 4px 0 55px;
+
+}
+
+
+.experience-label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #550202;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.experience-content h3 {
+
+    margin: 0;
+
+    color: #202020;
+
+    font-size: 23px;
+
+    font-weight: 750;
+
+}
+
+
+.experience-content p {
+
+    max-width: 600px;
+
+    margin: 11px 0 0;
+
+    color: #707070;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.experience-step:hover
+.experience-marker {
+
+    background: #550202;
+
+    border-color: #550202;
+
+}
+
+
+.experience-step:hover
+.experience-marker span {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-experience {
+
+        padding: 85px 6%;
+
+    }
+
+
+    .about-experience-heading {
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .experience-step {
+
+        grid-template-columns:
+            54px 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .experience-marker {
+
+        width: 54px;
+
+        height: 54px;
+
+    }
+
+
+    .experience-timeline::before {
+
+        left: 27px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-experience {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .about-experience-heading h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .about-experience-heading p {
+
+        font-size: 14px;
+
+    }
+
+
+    .experience-step {
+
+        grid-template-columns:
+            46px 1fr;
+
+        gap: 15px;
+
+        min-height: 155px;
+
+    }
+
+
+    .experience-marker {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+
+    .experience-marker span {
+
+        font-size: 10px;
+
+    }
+
+
+    .experience-timeline::before {
+
+        left: 23px;
+
+    }
+
+
+    .experience-content {
+
+        padding-bottom: 42px;
+
+    }
+
+
+    .experience-content h3 {
+
+        font-size: 19px;
+
+    }
+
+
+    .experience-content p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   PART 5 — FINAL BRAND STATEMENT
+========================================================= */
+
+.about-cta {
+
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 90px 7%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #550202 0%,
+            #350101 55%,
+            #1f0000 100%
+        );
+
+    isolation: isolate;
+
+}
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+========================================================= */
+
+.about-cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    top: -260px;
+
+    right: -160px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 50%;
+
+}
+
+
+.about-cta::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    left: -190px;
+
+    bottom: -190px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(750px, 100%);
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about-cta .about-eyebrow {
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.about-cta h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        46px,
+        7vw,
+        80px
+    );
+
+    font-weight: 850;
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+}
+
+
+.about-cta h2 span {
+
+    display: block;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-cta p {
+
+    max-width: 550px;
+
+    margin: 24px auto 0;
+
+    color:
+        rgba(255, 255, 255, 0.70);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.about-cta-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 32px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.about-cta-primary,
+.about-cta-secondary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 25px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.about-cta-primary {
+
+    background: #ffffff;
+
+    color: #550202;
+
+}
+
+
+.about-cta-primary:hover {
+
+    transform: translateY(-3px);
+
+    background: #f5eeee;
+
+}
+
+
+.about-cta-secondary {
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.35);
+
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+}
+
+
+.about-cta-secondary:hover {
+
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    color: #550202;
+
+}
+
+
+/* =========================================================
+   BRAND MARK
+========================================================= */
+
+.about-cta-mark {
+
+    position: absolute;
+
+    right: 6%;
+
+    bottom: 9%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    color:
+        rgba(255, 255, 255, 0.08);
+
+    font-size: 48px;
+
+    font-weight: 900;
+
+    line-height: 0.85;
+
+    letter-spacing: -2px;
+
+    user-select: none;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-cta {
+
+        min-height: 470px;
+
+        padding: 80px 6%;
+
+    }
+
+
+    .about-cta-mark {
+
+        font-size: 34px;
+
+        right: 5%;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-cta {
+
+        min-height: 450px;
+
+        padding: 70px 20px;
+
+    }
+
+
+    .about-cta h2 {
+
+        font-size: 47px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .about-cta p {
+
+        font-size: 14px;
+
+    }
+
+
+    .about-cta-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .about-cta-primary,
+    .about-cta-secondary {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+
+    .about-cta-mark {
+
+        display: none;
+
+    }
+
+}

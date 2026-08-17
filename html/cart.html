@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/pages/cart.css">
+   <link rel="stylesheet" href="/css/components/footer.css">
+    <title>Cart Page</title>
+</head>
+<body>
+     <div id="navbar"></div>
+
+<main class="cart-page">
+    <div class="cart-content">
+        <section class="cart-products">
+  <div id="cart-items"></div>
+
+        </section>
+<aside id="cart-summary" class="cart-summary">
+  <h2>Oder Summary</h2>
+
+
+<div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₦0</span>
+            </div>
+
+                <div class="summary-row">
+                <span>Delivery</span>
+                <span>Free</span>
+            </div>
+
+            <hr>
+
+              <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="total">₦0</span>
+            </div>
+
+             <button id="checkout-btn">
+                Proceed to Checkout
+            </button>
+            <hr>
+<button id="clear-cart-btn" class="btn btn-danger">
+    Clear Cart
+</button>
+</aside>
+
+
+    </div>
+</main>
+
+  
+<div id="footer"></div>
+
+    <script type="module" src="/js/components/loadNavbar.js"></script>
+    <script type="module" src="/js/pages/cartPage.js"></script>
+
+        <script
+    type="module"
+    src="/js/components/loadFooter.js"
+></script>
+
+</body>
+</html>

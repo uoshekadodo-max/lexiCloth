@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/pages/shop.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/slider.css">
+
+    <link rel="stylesheet" href="/css/components/toast.css">
+
+    <link rel="stylesheet" href="/css/components/product-grid.css">
+
+    <link rel="stylesheet" href="/css/components/productCard.css">
+    <title>LexiCloth Shop</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    
+<main class="shop-page">
+
+    <section class="shop-header">
+
+        <h1>Shop Collection</h1>
+
+        <p>
+            Discover premium fashion carefully selected for you.
+        </p>
+
+    </section>
+
+    <!-- FILTERS -->
+
+    <section class="shop-controls">
+
+        
+        <div class="category-filter">
+
+            <button class="category-btn active" data-category="All">All</button>
+
+            <button class="category-btn" data-category="Shirts">Shirts</button>
+
+            <button class="category-btn" data-category="Shoes">Shoes</button>
+
+            <button class="category-btn" data-category="Trousers">Trousers</button>
+
+            <button class="category-btn" data-category="Heels">Heels</button>
+
+            <button class="category-btn" data-category="Polo">Polo</button>
+
+            <button class="category-btn" data-category="Coats">Coats</button>
+
+        </div>
+
+        <div class="filter-row">
+
+            <div class="price-filter">
+
+                <input
+                    type="number"
+                    id="min-price"
+                    placeholder="Min Price"
+                >
+
+                <input
+                    type="number"
+                    id="max-price"
+                    placeholder="Max Price"
+                >
+
+            </div>
+
+            <select id="sort-products">
+
+                <option value="default">Sort By</option>
+
+                <option value="price-low">Price: Low to High</option>
+
+                <option value="price-high">Price: High to Low</option>
+
+                <option value="rating">Highest Rated</option>
+
+                <option value="name">A - Z</option>
+
+                <option value="newest">Newest</option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCT INFO -->
+
+    <section class="shop-info">
+
+        <p id="product-count"></p>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section>
+
+        <div id="shop-products" class="product-grid"></div>
+
+    </section>
+
+    <!-- PAGINATION -->
+
+    <section class="pagination-section">
+
+        <div id="pagination" class="pagination"></div>
+
+    </section>
+
+</main>
+
+
+<section class="recently-viewed">
+
+    <div class="section-header">
+
+        <h2>Recently Viewed</h2>
+
+        <div class="slider-buttons">
+
+            <button id="recentPrev">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+            <button id="recentNext">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="recent-slider">
+
+        <div
+            class="recent-track"
+            id="recent-products">
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="quick-view-modal" id="quickViewModal">
+
+    <div class="quick-view-box">
+
+        <button
+            class="close-modal"
+            id="closeQuickView">
+
+            &times;
+
+        </button>
+
+        <div id="quickViewContent"></div>
+
+    </div>
+
+</div>
+
+
+<section class="recommended-section">
+
+    <div class="sectionhead">
+
+        <h2>Recommended For You</h2>
+
+        <a href="shop.html">View All</a>
+
+    </div>
+
+    <div class="slidercontainer">
+
+       
+
+        <div
+            class="slider-wrapper"
+            id="recommendedWrapper"
+        >
+
+            <div
+                class="slider-track"
+                id="recommendedContainer"
+            ></div>
+
+        </div>
+
+      
+
+    </div>
+
+</section>
+
+<div id="footer"></div>
+
+    <script type="module" src="/js/components/loadNavbar.js"></script>
+    <script type="module" src="/js/pages/shop.js"></script>
+
+        <script
+    type="module"
+    src="/js/components/loadFooter.js"
+></script>
+</body>
+</html>

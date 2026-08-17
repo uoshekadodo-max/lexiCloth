@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/pages/productDeatail.css">
+
+    <link rel="stylesheet" href="/css/components/slider.css">
+    <link rel="stylesheet" href="/css/components/toast.css">
+<link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/pages/home.css">
+    <title>DetailsPage</title>
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+    <main class="product-details">
+
+    <div class="product-container">
+
+        <!-- LEFT SIDE -->
+        <section class="product-gallery">
+
+            <div class="main-image">
+
+                <img id="main-image" src="" alt="">
+
+            </div>
+
+            <div id="thumbnail-container" class="thumbnail-container">
+
+                <!-- Thumbnails -->
+
+            </div>
+
+        </section>
+
+        <!-- RIGHT SIDE -->
+        <section class="product-information">
+
+            <span id="product-category" class="product-category"></span>
+
+            <h1 id="product-name"></h1>
+
+            <div class="product-rating">
+
+                <div id="product-stars"></div>
+
+                <span id="product-review-count"></span>
+
+            </div>
+
+            <div class="product-price">
+
+                <span id="product-price"></span>
+
+            </div>
+
+            <p id="product-description"></p>
+
+            <hr>
+
+            <!-- Stock -->
+
+            <div class="product-stock">
+
+                <strong>Availability:</strong>
+
+                <span id="product-stock"></span>
+
+            </div>
+
+            <!-- SKU -->
+
+            <div class="product-sku">
+
+                <strong>SKU:</strong>
+
+                <span id="product-sku"></span>
+
+            </div>
+
+            <!-- Brand -->
+
+            <div class="product-brand">
+
+                <strong>Brand:</strong>
+
+                <span id="product-brand"></span>
+
+            </div>
+
+            <hr>
+
+            <!-- Size -->
+
+            <div class="product-size">
+
+                <h3>Select Size</h3>
+
+                <div id="size-options" class="size-options"></div>
+
+            </div>
+
+            <!-- Color -->
+
+            <div class="product-color">
+
+                <h3>Select Color</h3>
+
+                <div id="color-options" class="color-options"></div>
+
+            </div>
+
+            <!-- Quantity -->
+
+            <div class="product-quantity">
+
+                <h3>Quantity</h3>
+
+                <div class="quantity-box">
+
+                    <button id="minus">−</button>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        value="1"
+                        min="1"
+                    >
+
+                    <button id="plus">+</button>
+
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="product-actions">
+
+                <button id="add-cart">
+
+                    Add To Cart
+
+                </button>
+
+                <button id="add-wishlist">
+
+                    ♥ Wishlist
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Related Products -->
+
+
+<section class="theSlider">
+
+    <div class="sectionhead">
+
+        <h2>👀 Recently Viewed</h2>
+
+        <a href="shop.html">View All</a>
+
+    </div>
+
+    <div class="slidercontainer">
+
+        <button class="sliderbtn prev" id="recentPrev">
+
+            &#10094;
+
+        </button>
+
+        <div class="slider-wrapper" id="recentWrapper">
+
+            <div class="slider-track" id="recentContainer">
+
+            </div>
+
+        </div>
+
+        <button class="sliderbtn next" id="recentNext">
+
+            &#10095;
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="theSlider">
+
+    <div class="sectionhead">
+
+        <h4>✨ Recommended For You</h4>
+
+        <a href="shop.html">View All</a>
+
+    </div>
+
+
+    <div class="slidercontainer">
+
+
+
+        <div
+            class="slider-wrapper"
+            id="recommendedWrapper"
+        >
+
+            <div
+                class="slider-track"
+                id="recommendedContainer"
+            ></div>
+
+        </div>
+
+
+
+    </div>
+
+</section>
+
+
+<div id="footer"></div>
+
+
+      <script type="module" src="/js/components/loadNavbar.js"></script>
+    <script type="module" src="/js/pages/productDetail.js"></script>
+        <script
+    type="module"
+    src="/js/components/loadFooter.js"
+></script>
+</main>
+</body>
+</html>

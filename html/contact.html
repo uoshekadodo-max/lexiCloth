@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/components/footer.css">
+
+    <link rel="stylesheet" href="/css/pages/contact.css">
+    <title>contact page</title>
+</head>
+<body>
+    <div id="navbar"></div>
+
+
+<main class="contact-page">
+
+<section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+        <span class="contact-eyebrow">
+            LET'S CONNECT
+        </span>
+
+        <h1>
+            We'd Love To
+            <span>Hear From You.</span>
+        </h1>
+
+        <p>
+            Whether you have a question about an order,
+            need help choosing the right piece, or simply
+            want to connect with LexiCloth, we're here for you.
+        </p>
+
+        <div class="contact-hero-actions">
+
+            <a
+                href="#contact-details"
+                class="contact-primary-btn"
+            >
+                Contact Us
+            </a>
+
+            <a
+                href="mailto:support@lexicloth.com"
+                class="contact-secondary-btn"
+            >
+                Email Us
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="contact-hero-mark">
+
+        <span>LC</span>
+
+    </div>
+
+</section>
+
+
+<section
+    class="contact-details"
+    id="contact-details"
+>
+
+    <div class="contact-details-heading">
+
+        <span class="contact-eyebrow">
+            GET IN TOUCH
+        </span>
+
+        <h2>
+            We're Here To
+            <span>Help.</span>
+        </h2>
+
+        <p>
+            Have a question about LexiCloth?
+            Reach out through any of the channels below
+            and our team will be happy to assist you.
+        </p>
+
+    </div>
+
+
+    <div class="contact-info-grid">
+
+
+        <!-- Location -->
+
+        <article class="contact-info-card">
+
+            <div class="contact-icon">
+                📍
+            </div>
+
+            <div>
+
+                <span class="contact-label">
+                    VISIT US
+                </span>
+
+                <h3>
+                    Nigeria
+                </h3>
+
+                <p>
+                    Serving customers across Nigeria
+                    and beyond.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- Phone -->
+
+        <article class="contact-info-card">
+
+            <div class="contact-icon">
+                📞
+            </div>
+
+            <div>
+
+                <span class="contact-label">
+                    CALL US
+                </span>
+
+                <h3>
+                    +234 XXX XXX XXXX
+                </h3>
+
+                <p>
+                    Available Monday to Saturday.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- Email -->
+
+        <article class="contact-info-card">
+
+            <div class="contact-icon">
+                ✉
+            </div>
+
+            <div>
+
+                <span class="contact-label">
+                    EMAIL US
+                </span>
+
+                <h3>
+                    support@lexicloth.com
+                </h3>
+
+                <p>
+                    We normally respond as quickly
+                    as possible.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- Hours -->
+
+        <article class="contact-info-card">
+
+            <div class="contact-icon">
+                ◷
+            </div>
+
+            <div>
+
+                <span class="contact-label">
+                    BUSINESS HOURS
+                </span>
+
+                <h3>
+                    Mon — Sat
+                </h3>
+
+                <p>
+                    9:00 AM — 6:00 PM
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+<section class="contact-form-section">
+
+    <div class="contact-form-intro">
+
+        <span class="contact-eyebrow">
+            SEND A MESSAGE
+        </span>
+
+        <h2>
+            Let's Start
+            <span>A Conversation.</span>
+        </h2>
+
+        <p>
+            Have a question, suggestion, or need help
+            with something? Send us a message and we'll
+            get back to you.
+        </p>
+
+    </div>
+
+
+    <form
+        class="contact-form"
+        id="contactForm"
+        novalidate
+    >
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="contactName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Your full name"
+                    autocomplete="name"
+                    required
+                >
+
+                <small
+                    class="form-error"
+                    data-error="name"
+                ></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="contactEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <small
+                    class="form-error"
+                    data-error="email"
+                ></small>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="contactSubject">
+                Subject
+            </label>
+
+            <input
+                type="text"
+                id="contactSubject"
+                name="subject"
+                placeholder="What can we help you with?"
+                required
+            >
+
+            <small
+                class="form-error"
+                data-error="subject"
+            ></small>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="contactMessage">
+                Message
+            </label>
+
+            <textarea
+                id="contactMessage"
+                name="message"
+                rows="7"
+                maxlength="1500"
+                placeholder="Write your message here..."
+                required
+            ></textarea>
+
+            <div class="message-meta">
+
+                <small
+                    class="form-error"
+                    data-error="message"
+                ></small>
+
+                <span id="messageCount">
+                    0 / 1500
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="contact-submit-btn"
+            id="contactSubmit"
+        >
+
+            <span class="submit-text">
+                Send Message
+            </span>
+
+            <span
+                class="submit-loading"
+                aria-hidden="true"
+            >
+                Sending...
+            </span>
+
+        </button>
+
+
+        <p
+            class="form-status"
+            id="contactFormStatus"
+            role="status"
+            aria-live="polite"
+        ></p>
+
+    </form>
+
+</section>
+
+
+<!-- =====================================================
+     PART 4 — WHY CHOOSE LEXICLOTH
+===================================================== -->
+
+<section class="contact-trust">
+
+    <div class="contact-trust-heading">
+
+        <span class="contact-eyebrow">
+            THE LEXICLOTH EXPERIENCE
+        </span>
+
+        <h2>
+            More Than A
+            <span>Fashion Brand.</span>
+        </h2>
+
+        <p>
+            Every interaction matters to us.
+            From your first question to the moment
+            your order arrives, we want your experience
+            to feel as refined as what you wear.
+        </p>
+
+    </div>
+
+
+    <div class="contact-trust-grid">
+
+
+        <article class="contact-trust-card">
+
+            <div class="trust-number">
+                01
+            </div>
+
+            <div class="trust-icon">
+                ✦
+            </div>
+
+            <h3>
+                Personal Attention
+            </h3>
+
+            <p>
+                Your questions deserve more than an
+                automated response. We aim to provide
+                clear and helpful support.
+            </p>
+
+        </article>
+
+
+        <article class="contact-trust-card">
+
+            <div class="trust-number">
+                02
+            </div>
+
+            <div class="trust-icon">
+                ◆
+            </div>
+
+            <h3>
+                Quality First
+            </h3>
+
+            <p>
+                We believe confidence begins with pieces
+                that look good, feel good, and are made
+                with care.
+            </p>
+
+        </article>
+
+
+        <article class="contact-trust-card">
+
+            <div class="trust-number">
+                03
+            </div>
+
+            <div class="trust-icon">
+                ♢
+            </div>
+
+            <h3>
+                Customer Focused
+            </h3>
+
+            <p>
+                Whether you are shopping or simply need
+                assistance, your experience remains
+                at the center of what we do.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+
+<div id="footer"></div>
+
+
+<script type="module" src="/js/components/loadNavbar.js"></script>
+
+
+    <script
+    type="module"
+    src="/js/components/loadFooter.js"
+></script>
+
+<script
+    type="module"
+    src="/js/pages/contact.js"
+></script>
+</body>
+</html>

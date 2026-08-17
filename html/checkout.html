@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | LexiCloth</title>
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/navbar.css">
+    <link rel="stylesheet" href="/css/components/checkout.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+<main class="checkout-page">
+
+    <!-- Progress / Header Indicator -->
+    <header class="checkout-header">
+
+        <h1 class="page-title">Checkout</h1>
+
+        <div class="checkout-steps">
+
+            <span class="step active">
+
+                <span class="step-num">1</span>
+
+                Shipping & Billing
+
+            </span>
+
+            <span class="step-divider"></span>
+
+            <span class="step">
+
+                <span class="step-num">2</span>
+
+                Payment
+
+            </span>
+
+        </div>
+
+    </header>
+
+    <div class="checkout-container">
+
+        <!-- LEFT COLUMN -->
+       <section class="checkout-card">
+
+    <!-- ============================= -->
+    <!-- SHIPPING STEP -->
+    <!-- ============================= -->
+
+    <div id="shippingStep">
+
+        <div class="section-title">
+
+            <span class="section-badge">1</span>
+
+            <h2>Contact & Billing Details</h2>
+
+        </div>
+
+        <form id="checkout-form" class="form-grid" novalidate>
+
+            <!-- First Name -->
+
+            <div class="input-group">
+                <input type="text" id="firstName" name="firstName" placeholder=" " required>
+                <label for="firstName">First Name</label>
+                <span class="valid-icon">✓</span>
+            </div>
+
+            <!-- Last Name -->
+
+            <div class="input-group">
+                <input type="text" id="lastName" name="lastName" placeholder=" " required>
+                <label for="lastName">Last Name</label>
+                <span class="valid-icon">✓</span>
+            </div>
+
+            <!-- Email -->
+
+            <div class="input-group full-width">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label>Email Address</label>
+            </div>
+
+            <!-- Phone -->
+
+            <div class="input-group full-width">
+                <input type="tel" id="phone" name="phone" placeholder=" " required>
+                <label>Phone Number</label>
+            </div>
+
+            <!-- Delivery -->
+
+<div class="section-title full-width margin-top">
+
+    <span class="section-badge">2</span>
+
+    <h2>Delivery Method</h2>
+
+</div>
+
+<div class="delivery-options full-width">
+
+    <label class="delivery-card active">
+
+        <input
+            type="radio"
+            name="delivery"
+            value="standard"
+            checked>
+
+        <div class="delivery-content">
+
+            <div class="delivery-info">
+
+                <span class="delivery-title">
+                    Standard Shipping
+                </span>
+
+                <span class="delivery-time">
+                    3–5 Business Days
+                </span>
+
+            </div>
+
+            <span class="delivery-price">
+                Free
+            </span>
+
+        </div>
+
+    </label>
+
+    <label class="delivery-card">
+
+        <input
+            type="radio"
+            name="delivery"
+            value="express">
+
+        <div class="delivery-content">
+
+            <div class="delivery-info">
+
+                <span class="delivery-title">
+                    Express Courier
+                </span>
+
+                <span class="delivery-time">
+                    1–2 Business Days
+                </span>
+
+            </div>
+
+            <span class="delivery-price">
+                $15.00
+            </span>
+
+        </div>
+
+    </label>
+
+</div>
+
+            <div class="section-title full-width margin-top">
+
+                <span class="section-badge">2</span>
+
+                <h2>Delivery Method</h2>
+
+            </div>
+
+            <div class="delivery-options full-width">
+
+                <!-- Delivery Cards -->
+
+            </div>
+
+            <!-- Address -->
+
+            <div class="input-group full-width">
+                <input type="text" id="address" required placeholder=" ">
+                <label>Street Address</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="city" required placeholder=" ">
+                <label>City</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="state" required placeholder=" ">
+                <label>State</label>
+            </div>
+
+            <div class="input-group full-width">
+
+                <textarea id="notes" rows="3" placeholder=" "></textarea>
+
+                <label>Order Notes</label>
+
+            </div>
+
+            <button
+
+                type="submit"
+
+                class="btn-primary">
+
+                Continue To Payment
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- ============================= -->
+    <!-- PAYMENT STEP -->
+    <!-- ============================= -->
+
+    <div
+
+        id="paymentStep"
+
+        style="display:none;">
+
+        <div class="section-title">
+
+            <span class="section-badge">3</span>
+
+            <h2>Payment Method</h2>
+
+        </div>
+
+        <div class="payment-options">
+
+            <label class="payment-card active">
+
+                <input
+
+                    type="radio"
+
+                    name="payment"
+
+                    value="card"
+
+                    checked>
+
+                <div>
+
+                    💳 Debit / Credit Card
+
+                </div>
+
+            </label>
+
+            <label class="payment-card">
+
+                <input
+
+                    type="radio"
+
+                    name="payment"
+
+                    value="bank">
+
+                <div>
+
+                    🏦 Bank Transfer
+
+                </div>
+
+            </label>
+
+            <label class="payment-card">
+
+                <input
+
+                    type="radio"
+
+                    name="payment"
+
+                    value="cod">
+
+                <div>
+
+                    🚚 Cash On Delivery
+
+                </div>
+
+            </label>
+
+        </div>
+
+        <div id="paymentContent"></div>
+
+        <button
+
+            id="placeOrder"
+
+            type="button"
+
+            class="btn-primary">
+
+            <span class="btn-text">
+
+                Place Order
+
+            </span>
+
+            <span class="btn-loader">
+
+                <i class="fa-solid fa-spinner fa-spin"></i>
+
+                Processing...
+
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+        <!-- RIGHT COLUMN -->
+        <aside class="checkout-card order-summary">
+
+            <div class="card-header">
+
+                <h2>Order Summary</h2>
+
+                <span
+                    class="item-count"
+                    id="checkoutItemCount">
+                </span>
+
+            </div>
+
+            <!-- Dynamic Order Items -->
+            <div
+                class="order-items"
+                id="checkoutItems">
+            </div>
+
+            <!-- Promo Code -->
+            <div class="promo-code-box">
+
+                <input
+                    type="text"
+                    id="promoCode"
+                    placeholder="Promo code or gift card">
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    id="applyPromo">
+
+                    Apply
+
+                </button>
+
+            </div>
+
+            <hr class="divider">
+
+            <!-- Totals -->
+            <div class="summary-totals">
+
+                <div class="summary-row">
+
+                    <span>Subtotal</span>
+
+                    <span id="checkoutSubtotal">
+
+                        $0.00
+
+                    </span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Shipping</span>
+
+                    <span
+                        class="highlight-text"
+                        id="checkoutShipping">
+
+                        Free
+
+                    </span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Estimated Tax</span>
+
+                    <span id="checkoutTax">
+
+                        $0.00
+
+                    </span>
+
+                </div>
+
+                <hr class="divider">
+
+                <div class="summary-row total-row">
+
+                    <span>Total Due</span>
+
+                    <span
+                        class="total-amount"
+                        id="checkoutTotal">
+
+                        $0.00
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="security-badge">
+
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+
+                </svg>
+
+                <span>
+
+                    256-Bit SSL Encryption • Express Checkout Available
+
+                </span>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<div id="footer"></div>
+
+
+    <script type="module" src="/js/pages/checkout.js"></script>
+
+
+        <script
+    type="module"
+    src="/js/components/loadFooter.js"
+></script>
+</body>
+</html>

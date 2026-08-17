@@ -1,0 +1,243 @@
+
+<link 
+rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/components/navbar.css">
+
+
+<nav class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <!-- ===========================
+                LOGO
+        ============================ -->
+
+        <a href="/Home.html" class="logo">
+
+            <span>Lexi</span>Cloth
+
+        </a>
+
+        <!-- ===========================
+                DESKTOP NAVIGATION
+        ============================ -->
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/Home.html" data-nav="home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="/html/shop.html" data-nav="shop">
+                    Shop
+                </a>
+            </li>
+
+            <li>
+                <a href="/html/about.html" data-nav="about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="/html/contact.html" data-nav="contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- ===========================
+                SEARCH
+        ============================ -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="search"
+                placeholder="Search products..."
+                autocomplete="off"
+            >
+
+        </div>
+
+        <!-- ===========================
+                ACTIONS
+        ============================ -->
+
+        <div class="nav-actions">
+
+            <!-- Wishlist -->
+
+            <a
+                href="/html/wishlist.html"
+                class="nav-icon"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+                <span
+                    class="badge"
+                    id="wishlist-count"
+                >
+
+                    0
+
+                </span>
+
+            </a>
+
+            <!-- Cart -->
+
+            <a
+                href="/html/cart.html"
+                class="nav-icon"
+                aria-label="Shopping Cart"
+            >
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="badge"
+                    id="cart-count"
+                >
+
+                    0
+
+                </span>
+
+            </a>
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-btn"
+                id="menu-btn"
+                aria-label="Open Menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ===========================
+        MOBILE SIDEBAR
+=========================== -->
+
+<aside
+    class="mobile-menu"
+    id="mobile-menu"
+>
+
+    <button
+        class="close-btn"
+        id="close-menu"
+        aria-label="Close Menu"
+    >
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <ul>
+
+        <li>
+
+            <a
+                href="/Home.html"
+                data-nav="home"
+            >
+
+                Home
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a
+                href="/html/shop.html"
+                data-nav="shop"
+            >
+
+                Shop
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a
+                href="/html/shop.html"
+                data-nav="about"
+            >
+
+                About
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a
+                href="/html/contact.html"
+                data-nav="contact"
+            >
+
+                Contact
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="/html/wishlist.html">
+
+                Wishlist
+
+            </a>
+
+        </li>
+
+        <li>
+
+            <a href="/html/cart.html">
+
+                Cart
+
+            </a>
+
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- ===========================
+        OVERLAY
+=========================== -->
+
+<div
+    class="overlay"
+    id="overlay"
+></div>
+    
+<script type="module" src="/js/components/navbar.js"></script>

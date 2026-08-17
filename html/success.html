@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/pages/success.css">
+<link rel="stylesheet" href="/css/components/footer.css">
+    <title>Successful</title>
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+
+    <div class="confetti">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+  <main class="success-page">
+
+    <section class="success-hero">
+
+        <div class="success-icon">
+
+            <svg viewBox="0 0 52 52">
+
+                <circle
+                    class="check-circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                />
+
+                <path
+                    class="check-mark"
+                    fill="none"
+                    d="M14 27l7 7 17-17"
+                />
+
+            </svg>
+
+        </div>
+
+        <h1>
+
+            Order Confirmed!
+
+        </h1>
+
+       <h3 id="customerName"></h3>
+
+<p class="success-subtitle">
+
+    Your order has been confirmed.
+
+    We're preparing everything carefully before shipping it to you.
+
+</p>
+
+    </section>
+
+    <section class="success-card">
+
+        <div class="card-header">
+
+            <span class="badge">
+
+                ✓ Successful
+
+            </span>
+
+            <h2>
+
+                Order Details
+
+            </h2>
+
+        </div>
+
+        <div class="order-grid">
+
+            <div class="order-item">
+
+                <span class="label">
+
+                    Order ID
+
+                </span>
+
+                <span
+                    class="value"
+                    id="orderId">
+
+                </span>
+
+            </div>
+
+            <div class="order-item">
+
+                <span class="label">
+
+                    Order Date
+
+                </span>
+
+                <span
+                    class="value"
+                    id="orderDate">
+
+                </span>
+
+            </div>
+
+            <div class="order-item">
+
+                <span class="label">
+
+                    Payment
+
+                </span>
+
+                <span
+                    class="value"
+                    id="paymentMethod">
+
+                </span>
+
+            </div>
+
+            <div class="order-item">
+
+                <span class="label">
+
+                    Delivery
+
+                </span>
+
+                <span
+                    class="value"
+                    id="deliveryMethod">
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="success-order-summary">
+
+    <div class="summary-card">
+
+        <h2>
+
+            Purchased Items
+
+        </h2>
+
+        <div id="orderedItems" class="ordered-items">
+
+        </div>
+
+        <div class="summary-totals">
+
+            <div class="summary-row">
+
+                <span>Subtotal</span>
+
+                <span id="summarySubtotal"></span>
+
+            </div>
+
+            <div class="summary-row">
+
+                <span>Shipping</span>
+
+                <span id="summaryShipping"></span>
+
+            </div>
+
+            <div class="summary-row">
+
+                <span>Tax</span>
+
+                <span id="summaryTax"></span>
+
+            </div>
+
+            <div class="summary-row total">
+
+                <span>Total Paid</span>
+
+                <span id="summaryTotal"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="delivery-progress">
+
+    <div class="timeline-card">
+
+        <h2>
+
+            Order Progress
+
+        </h2>
+
+        <div class="timeline">
+
+            <div class="timeline-step completed">
+
+                <div class="timeline-icon">
+
+                    ✓
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h4>
+
+                        Order Confirmed
+
+                    </h4>
+
+                    <p>
+
+                        Your order has been received.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-step active">
+
+                <div class="timeline-icon">
+
+                    📦
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h4>
+
+                        Preparing Package
+
+                    </h4>
+
+                    <p>
+
+                        Our team is packing your order.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-step">
+
+                <div class="timeline-icon">
+
+                    🚚
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h4>
+
+                        Shipped
+
+                    </h4>
+
+                    <p>
+
+                        Your package is on its way.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-step">
+
+                <div class="timeline-icon">
+
+                    🏠
+
+                </div>
+
+                <div class="timeline-content">
+
+                    <h4>
+
+                        Delivered
+
+                    </h4>
+
+                    <p>
+
+                        Enjoy your new purchase.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="recommended-products">
+
+    <h2>
+
+        You May Also Like
+
+    </h2>
+
+    <div
+        id="recommendedProducts"
+        class="recommend-grid">
+
+    </div>
+
+</section>
+
+<section class="success-actions">
+
+    <a href="shop.html" class="continue-btn">
+
+        Continue Shopping
+
+    </a>
+
+    <button
+        class="track-btn"
+        id="trackOrder">
+
+        Track Order
+
+    </button>
+
+</section>
+
+<section class="support-card">
+
+<h2>
+
+Need Help?
+
+</h2>
+
+<p>
+
+Our luxury support team is always available.
+
+</p>
+
+<div class="support-links">
+
+<a href="#">
+
+📧 support@lexicloth.com
+
+</a>
+
+<a href="#">
+
+📞 +234 800 000 000
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+    
+<div id="footer"></div>
+
+
+
+
+
+<script type="module"  src="/js/components/loadNavbar.js"></script>
+
+
+
+<script
+type="module"
+src="/js/pages/success.js"></script>
+
+    <script
+    type="module"
+    src="/js/components/loadFooter.js"
+></script>
+
+
+</body>
+</html>

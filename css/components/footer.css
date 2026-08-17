@@ -1,0 +1,224 @@
+
+.footer{
+
+    background:#550202;
+
+    margin-top:50px;
+
+    color:white;
+
+    overflow:hidden;
+
+}
+.gold-line{
+
+    height:4px;
+
+    background:#FFD86B;
+
+    width:0;
+
+    animation:goldLine 2s forwards;
+
+}
+
+@keyframes goldLine{
+
+to{
+
+width:100%;
+
+}
+
+}
+
+.footer-container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:80px 0 40px;
+
+}
+
+.footer-brand{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.footer-brand h1{
+
+    font-size:55px;
+
+    color:#FFD86B;
+
+    letter-spacing:8px;
+
+}
+
+.footer-brand p{
+
+    color:#ddd;
+
+    margin-top:15px;
+
+    font-size:18px;
+
+}
+
+.footer-contact{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:70px;
+
+    color:#ddd;
+
+}
+
+.footer-links{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+    margin-bottom:80px;
+
+}
+
+.footer-column h3{
+
+    color:#FFD86B;
+
+    margin-bottom:25px;
+
+}
+
+.footer-column a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:#ddd;
+
+    margin:12px 0;
+
+    transition:.3s;
+
+}
+
+.footer-column a:hover{
+
+    color:#FFD86B;
+
+    transform:translateX(8px);
+
+}
+
+.payment{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+.payment h3{
+
+    color:#FFD86B;
+
+    margin-bottom:25px;
+
+}
+
+.payment-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.payment-icons span{
+
+    background:rgba(255,255,255,.1);
+
+    padding:15px 22px;
+
+    border-radius:40px;
+
+    transition:.4s;
+
+}
+
+.payment-icons span:hover{
+
+    background:#FFD86B;
+
+    color:#550202;
+
+}
+
+#backToTop{
+
+    display:block;
+
+    margin:0 auto 60px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#FFD86B;
+
+    color:#550202;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+#backToTop:hover{
+
+    transform:translateY(-10px) scale(1.1);
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    color:#ccc;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+    padding-top:30px;
+
+    line-height:2;
+
+}
