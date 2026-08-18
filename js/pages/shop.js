@@ -8,7 +8,7 @@ import { CONFIG } from "../core/config.js";
 
 import recommendedProducts from "../components/recommendedProducts.js";
 
-/* =========================
+/*
    STATE
 ========================= */
 
@@ -34,7 +34,7 @@ const state = {
 
 };
 
-/* =========================
+/*
    DOM
 ========================= */
 
@@ -66,7 +66,7 @@ const elements = {
 let selectedSize = null;
 let selectedColor = null;
 
-/* =========================
+/*
    INIT
 ========================= */
 
@@ -292,15 +292,15 @@ function hideSkeleton(){
 
 function applyFilters() {
 
-    /* =========================
+    /*
        RESET PRODUCTS
-    ========================= */
+    */
 
     let products = [...state.allProducts];
 
-    /* =========================
+    /*
        CATEGORY
-    ========================= */
+    */
 
     if (state.currentCategory !== "All") {
 
@@ -312,9 +312,9 @@ function applyFilters() {
 
     }
 
-    /* =========================
+    /*
        SEARCH
-    ========================= */
+    */
 
     if (state.searchQuery !== "") {
 
@@ -340,9 +340,9 @@ function applyFilters() {
 
     }
 
-    /* =========================
+    /*
        MIN PRICE
-    ========================= */
+    */
 
     if (state.minPrice !== "") {
 
@@ -354,9 +354,9 @@ function applyFilters() {
 
     }
 
-    /* =========================
+    /*
        MAX PRICE
-    ========================= */
+    */
 
     if (state.maxPrice !== "") {
 
@@ -368,9 +368,9 @@ function applyFilters() {
 
     }
 
-    /* =========================
+    /*
        SORTING
-    ========================= */
+    */
 
     switch (state.currentSort) {
 
@@ -426,15 +426,15 @@ function applyFilters() {
 
     }
 
-    /* =========================
+    /*
        SAVE FILTERED PRODUCTS
-    ========================= */
+    */
 
     state.filteredProducts = products;
 
-    /* =========================
+    /*
        EMPTY STATE
-    ========================= */
+    */
 
     if (!products.length) {
 
@@ -452,9 +452,9 @@ function applyFilters() {
 
     }
 
-    /* =========================
+    /*
        PAGINATION
-    ========================= */
+    */
 
     const start =
 
@@ -654,13 +654,13 @@ function renderPagination() {
 
     if (totalPages <= 1) return;
 
-    /* =========================
+    /*
        PREVIOUS BUTTON
-    ========================= */
+    */
 
     const previous = createPaginationButton(
 
-        "← Previous",
+        "←",
 
         state.currentPage - 1,
 
@@ -670,9 +670,9 @@ function renderPagination() {
 
     elements.pagination.appendChild(previous);
 
-    /* =========================
+    /*
        PAGE NUMBERS
-    ========================= */
+    */
 
     const maxVisible = 5;
 
@@ -786,13 +786,13 @@ function renderPagination() {
 
     }
 
-    /* =========================
+    /*
        NEXT BUTTON
-    ========================= */
+    */
 
     const next = createPaginationButton(
 
-        "Next →",
+        "→",
 
         state.currentPage + 1,
 
