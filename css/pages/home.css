@@ -1295,9 +1295,9 @@ transform:rotate(2deg);
 /*
 NEWSLETTER
 */
-/* =========================================================
+/* 
    LEXICLOTH NEWSLETTER
-========================================================= */
+*/
 
 .newsletter-section {
 
@@ -1333,68 +1333,15 @@ NEWSLETTER
     border-radius: 24px;
 
     background:
-        linear-gradient(
-            135deg,
-            #550202,
-            #310101
-        );
-
-    box-shadow:
-        0 25px 60px
-        rgba(85, 2, 2, 0.18);
+       
+            #550202;
 
 }
 
 
-/* Decorative circles */
-
-.newsletter-container::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-
-    height: 350px;
-
-    top: -190px;
-
-    right: -100px;
-
-    border: 1px solid
-        rgba(255, 255, 255, 0.10);
-
-    border-radius: 50%;
-
-}
-
-
-.newsletter-container::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 220px;
-
-    height: 220px;
-
-    bottom: -140px;
-
-    left: -100px;
-
-    border: 1px solid
-        rgba(255, 255, 255, 0.08);
-
-    border-radius: 50%;
-
-}
-
-
-/* =========================================================
+/* 
    CONTENT
-========================================================= */
+*/
 
 .newsletter-content {
 
@@ -1470,9 +1417,9 @@ NEWSLETTER
 }
 
 
-/* =========================================================
+/* 
    FORM
-========================================================= */
+*/
 
 .newsletter-form {
 
@@ -1587,9 +1534,9 @@ NEWSLETTER
 }
 
 
-/* =========================================================
+/* 
    MESSAGE
-========================================================= */
+*/
 
 .newsletter-message {
 
@@ -1632,9 +1579,9 @@ NEWSLETTER
 }
 
 
-/* =========================================================
+/* 
    TABLET
-========================================================= */
+*/
 
 @media (max-width: 850px) {
 
@@ -1658,9 +1605,9 @@ NEWSLETTER
 }
 
 
-/* =========================================================
+/* 
    MOBILE
-========================================================= */
+*/
 
 @media (max-width: 550px) {
 
