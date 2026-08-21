@@ -8,8 +8,11 @@ async function loadFooter() {
 
     try {
 
-        const response =
-            await fetch("/html/component/footer.html");
+     const footerPath = window.location.pathname.includes("/html/")
+    ? "./component/footer.html"
+    : "./html/component/footer.html";
+
+const response = await fetch(footerPath);
 
         if (!response.ok) {
 

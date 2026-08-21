@@ -1,10 +1,36 @@
 import cartService from "../services/cartService.js";
 import wishlistService from "../services/wishlistService.js";
 import globalSearch from "./globalSearch.js";
+
+
 // ===============================
-// Mobile Menu
+// Navigation
 // ===============================
 
+const isHtmlPage = window.location.pathname.includes("/html/");
+
+const pagePaths = {
+    home: isHtmlPage ? "../index.html" : "./index.html",
+    shop: isHtmlPage ? "./shop.html" : "./html/shop.html",
+    about: isHtmlPage ? "./about.html" : "./html/about.html",
+    contact: isHtmlPage ? "./contact.html" : "./html/contact.html",
+    wishlist: isHtmlPage ? "./wishlist.html" : "./html/wishlist.html",
+    cart: isHtmlPage ? "./cart.html" : "./html/cart.html"
+};
+
+document.querySelectorAll("[data-nav]").forEach((link) => {
+
+    const page = link.dataset.nav;
+
+    if (pagePaths[page]) {
+        link.href = pagePaths[page];
+    }
+
+});
+
+
+
+// Mobile Menu
 const menuBtn = document.getElementById("menu-btn");
 const closeBtn = document.getElementById("close-menu");
 const sidebar = document.getElementById("mobile-menu");
@@ -36,9 +62,9 @@ if (menuBtn && closeBtn && sidebar && overlay) {
 
 }
 
-// ===============================
+// 
 // Navbar Counts
-// ===============================
+// 
 
 function updateNavbarCounts() {
 

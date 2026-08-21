@@ -11,8 +11,11 @@ async function loadNavbar() {
 
     try {
 
-        const response =
-            await fetch("/html/component/navbar.html");
+     const navbarPath = window.location.pathname.includes("/html/")
+    ? "./component/navbar.html"
+    : "./html/component/navbar.html";
+
+const response = await fetch(navbarPath);
 
 
         if (!response.ok) {
