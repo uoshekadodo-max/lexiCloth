@@ -16,7 +16,7 @@ const pagePaths = {
     contact: isHtmlPage ? "./contact.html" : "./html/contact.html",
     wishlist: isHtmlPage ? "./wishlist.html" : "./html/wishlist.html",
     cart: isHtmlPage ? "./cart.html" : "./html/cart.html"
-};
+}; 
 
 document.querySelectorAll("[data-nav]").forEach((link) => {
 
