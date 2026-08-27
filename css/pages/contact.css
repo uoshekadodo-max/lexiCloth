@@ -1,1521 +1,2411 @@
 /* =========================================================
-   LEXICLOTH CONTACT PAGE
-   PART 1 — HERO
+LEXICLOTH
+CONTACT / CONNECTION DESK
+BRAND SYSTEM
 ========================================================= */
-
-.contact-page {
-
-    width: 100%;
-
-    overflow: hidden;
-
-}
-
 
 /* =========================================================
-   HERO
+CORE VARIABLES
 ========================================================= */
 
-.contact-hero {
+:root {
 
-    position: relative;
 
-    min-height: 520px;
+--lexi-burgundy: #550202;
+--lexi-burgundy-dark: #380101;
+--lexi-burgundy-light: #741111;
 
-    display: flex;
+--lexi-bone: #f3f0e8;
+--lexi-paper: #e9e5dc;
+--lexi-black: #111111;
+--lexi-soft-black: #1b1b1b;
 
-    align-items: center;
+--lexi-muted: #77736c;
 
-    justify-content: center;
+--lexi-line: rgba(17, 17, 17, 0.17);
+--lexi-light-line: rgba(243, 240, 232, 0.2);
 
-    padding: 90px 7%;
+--page-padding:
+    clamp(1.15rem, 4vw, 5rem);
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #faf7f7 55%,
-            #f5eeee 100%
-        );
+--section-space:
+    clamp(6rem, 12vw, 12rem);
 
-    isolation: isolate;
+--max-width: 1500px;
+
+--display:
+    "Arial Narrow",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+--body:
+    Inter,
+    Helvetica,
+    Arial,
+    sans-serif;
+
 
 }
-
-
-/* Decorative background */
-
-.contact-hero::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 420px;
-
-    height: 420px;
-
-    right: -160px;
-
-    top: -160px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(85, 2, 2, 0.07);
-
-    z-index: -1;
-
-}
-
-
-/* Second decorative element */
-
-.contact-hero::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 220px;
-
-    height: 220px;
-
-    left: -100px;
-
-    bottom: -100px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(85, 2, 2, 0.12);
-
-    z-index: -1;
-
-}
-
 
 /* =========================================================
-   CONTENT
+RESET
 ========================================================= */
 
-.contact-hero-content {
-
-    width: min(760px, 100%);
-
-    text-align: center;
-
+.lexi-contact,
+.lexi-contact *,
+.lexi-contact *::before,
+.lexi-contact *::after {
+box-sizing: border-box;
 }
 
-
-/* Eyebrow */
-
-.contact-eyebrow {
-
-    display: inline-block;
-
-    margin-bottom: 18px;
-
-    color: #550202;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
+.lexi-contact {
+width: 100%;
+overflow: hidden;
+background: var(--lexi-bone);
+color: var(--lexi-black);
+font-family: var(--body);
 }
 
-
-/* Heading */
-
-.contact-hero h1 {
-
-    margin: 0;
-
-    color: #171717;
-
-    font-size: clamp(
-        42px,
-        6vw,
-        76px
-    );
-
-    font-weight: 800;
-
-    line-height: 1.02;
-
-    letter-spacing: -2px;
-
+.lexi-contact h1,
+.lexi-contact h2,
+.lexi-contact h3,
+.lexi-contact p {
+margin: 0;
 }
 
-
-/* Brand color */
-
-.contact-hero h1 span {
-
-    display: block;
-
-    color: #550202;
-
+.lexi-contact h1,
+.lexi-contact h2,
+.lexi-contact h3 {
+font-family: var(--display);
+font-weight: 700;
+letter-spacing: -0.06em;
 }
 
-
-/* Description */
-
-.contact-hero p {
-
-    max-width: 620px;
-
-    margin: 25px auto 0;
-
-    color: #666;
-
-    font-size: 16px;
-
-    line-height: 1.8;
-
+.lexi-contact a {
+color: inherit;
+text-decoration: none;
 }
 
+.lexi-contact button,
+.lexi-contact input,
+.lexi-contact textarea {
+font: inherit;
+}
 
 /* =========================================================
-   ACTIONS
+GLOBAL EDITORIAL LABELS
 ========================================================= */
 
-.contact-hero-actions {
+.contact-kicker,
+.editorial-number,
+.contact-cover-top,
+.cover-footer,
+.channel-index,
+.channel-type,
+.form-top-line,
+.message-meta,
+.trust-top,
+.final-label {
 
-    display: flex;
 
-    justify-content: center;
+font-size: 0.66rem;
+line-height: 1;
+font-weight: 700;
+letter-spacing: 0.16em;
+text-transform: uppercase;
 
-    align-items: center;
-
-    gap: 12px;
-
-    margin-top: 32px;
-
-    flex-wrap: wrap;
 
 }
-
-
-.contact-primary-btn,
-.contact-secondary-btn {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    min-height: 46px;
-
-    padding: 0 24px;
-
-    border-radius: 999px;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        color 0.25s ease,
-        box-shadow 0.25s ease;
-
-}
-
-
-.contact-primary-btn {
-
-    background: #550202;
-
-    color: #ffffff;
-
-    box-shadow:
-        0 10px 25px rgba(85, 2, 2, 0.18);
-
-}
-
-
-.contact-primary-btn:hover {
-
-    transform: translateY(-2px);
-
-    background: #3f0101;
-
-    box-shadow:
-        0 14px 30px rgba(85, 2, 2, 0.24);
-
-}
-
-
-.contact-secondary-btn {
-
-    border: 1px solid rgba(85, 2, 2, 0.25);
-
-    background: rgba(255, 255, 255, 0.7);
-
-    color: #550202;
-
-}
-
-
-.contact-secondary-btn:hover {
-
-    transform: translateY(-2px);
-
-    background: #550202;
-
-    color: #ffffff;
-
-}
-
 
 /* =========================================================
-   DECORATIVE LC MARK
+CONTACT COVER
 ========================================================= */
 
-.contact-hero-mark {
+.contact-cover {
 
-    position: absolute;
 
-    right: 7%;
+position: relative;
 
-    bottom: 12%;
+min-height: 100vh;
+min-height: 100svh;
 
-    width: 110px;
+padding:
+    1.4rem
+    var(--page-padding)
+    2rem;
 
-    height: 110px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 
-    display: flex;
+background: var(--lexi-bone);
 
-    align-items: center;
-
-    justify-content: center;
-
-    border: 1px solid rgba(85, 2, 2, 0.15);
-
-    border-radius: 50%;
-
-    color: rgba(85, 2, 2, 0.28);
-
-    font-size: 22px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
 
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .contact-hero {
-
-        min-height: 480px;
-
-        padding: 75px 6%;
-
-    }
+.contact-cover-top {
 
 
-    .contact-hero-mark {
+display: flex;
+justify-content: space-between;
 
-        right: 5%;
+padding-bottom: 1.4rem;
 
-        bottom: 8%;
+border-bottom:
+    1px solid var(--lexi-line);
 
-        width: 80px;
+color: var(--lexi-muted);
 
-        height: 80px;
-
-        font-size: 17px;
-
-    }
 
 }
 
+.contact-cover-main {
+
+
+width: min(100%, var(--max-width));
+
+margin: auto;
+
+display: grid;
+
+grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(300px, 0.9fr);
+
+gap: clamp(4rem, 10vw, 12rem);
+
+align-items: center;
+
+
+}
+
+.cover-copy {
+position: relative;
+z-index: 2;
+}
+
+.cover-copy .contact-kicker {
+margin-bottom: 2rem;
+}
+
+.cover-copy h1 {
+
+
+font-size:
+    clamp(6rem, 15vw, 15rem);
+
+line-height: 0.72;
+
+text-transform: uppercase;
+
+
+}
+
+.cover-copy h1 span {
+
+
+display: block;
+
+margin-left:
+    clamp(2rem, 10vw, 11rem);
+
+color: var(--lexi-burgundy);
+
+font-style: italic;
+
+font-weight: 400;
+
+
+}
+
+.cover-description {
+
+
+width: min(100%, 500px);
+
+margin-top: 3rem;
+
+margin-left:
+    clamp(0rem, 10vw, 11rem);
+
+color: #5c5953;
+
+font-size: 0.95rem;
+
+line-height: 1.9;
+
+
+}
+
+.cover-description strong {
+
+
+display: block;
+
+margin-top: 0.7rem;
+
+color: var(--lexi-black);
+
+font-family: var(--display);
+
+font-size: 1.1rem;
+
+text-transform: uppercase;
+
+
+}
+
+.cover-scroll {
+
+
+display: inline-flex;
+
+align-items: center;
+
+gap: 1.5rem;
+
+margin-top: 2.5rem;
+
+margin-left:
+    clamp(0rem, 10vw, 11rem);
+
+padding-bottom: 0.7rem;
+
+border-bottom:
+    1px solid var(--lexi-black);
+
+font-size: 0.68rem;
+
+font-weight: 700;
+
+letter-spacing: 0.13em;
+
+text-transform: uppercase;
+
+
+}
+
+.cover-scroll span:last-child {
+
+
+color: var(--lexi-burgundy);
+
+font-size: 1.2rem;
+
+
+}
 
 /* =========================================================
-   MOBILE
+BURGUNDY CONTACT OBJECT
 ========================================================= */
 
-@media (max-width: 480px) {
-
-    .contact-hero {
-
-        min-height: 470px;
-
-        padding: 65px 20px;
-
-    }
+.contact-object {
 
 
-    .contact-hero h1 {
+position: relative;
 
-        font-size: 42px;
+width: min(100%, 450px);
 
-        letter-spacing: -1.5px;
+aspect-ratio: 0.72;
 
-    }
+margin: auto;
 
+background: var(--lexi-burgundy);
 
-    .contact-hero p {
+color: var(--lexi-bone);
 
-        margin-top: 20px;
-
-        font-size: 14px;
-
-        line-height: 1.7;
-
-    }
+transform: rotate(3deg);
 
 
-    .contact-hero-actions {
+}
 
-        margin-top: 27px;
-
-    }
+.contact-object::before {
 
 
-    .contact-primary-btn,
-    .contact-secondary-btn {
+content: "";
 
-        width: 100%;
+position: absolute;
 
-        max-width: 280px;
+inset: 1.5rem;
 
-    }
+border:
+    1px solid
+    rgba(243, 240, 232, 0.25);
 
 
-    .contact-hero-mark {
+}
 
-        display: none;
+.contact-object::after {
 
-    }
 
-}/* =========================================================
-   CONTACT DETAILS
+content: "";
+
+position: absolute;
+
+width: 55%;
+height: 55%;
+
+left: 22.5%;
+top: 22.5%;
+
+border:
+    1px solid
+    rgba(243, 240, 232, 0.18);
+
+transform: rotate(45deg);
+
+
+}
+
+.object-inner {
+
+
+position: absolute;
+
+inset: 2rem;
+
+z-index: 2;
+
+
+}
+
+.object-monogram {
+
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+font-family: var(--display);
+
+font-size:
+    clamp(5rem, 10vw, 10rem);
+
+font-weight: 700;
+
+line-height: 0.8;
+
+letter-spacing: -0.1em;
+
+
+}
+
+.object-word {
+
+
+position: absolute;
+
+right: -2rem;
+top: 40%;
+
+font-family: var(--display);
+
+font-size:
+    clamp(3rem, 6vw, 6rem);
+
+line-height: 1;
+
+letter-spacing: -0.08em;
+
+transform: rotate(90deg);
+
+
+}
+
+.object-year {
+
+
+position: absolute;
+
+left: 0;
+bottom: 0;
+
+font-size: 0.62rem;
+
+letter-spacing: 0.18em;
+
+
+}
+
+.object-side {
+
+
+position: absolute;
+
+right: -4.5rem;
+top: 12%;
+
+writing-mode: vertical-rl;
+
+color: var(--lexi-muted);
+
+font-size: 0.59rem;
+
+letter-spacing: 0.17em;
+
+
+}
+
+/* =========================================================
+COVER FOOTER
+========================================================= */
+
+.cover-footer {
+
+
+display: grid;
+
+grid-template-columns:
+    auto
+    1fr
+    auto;
+
+gap: 1rem;
+
+align-items: center;
+
+color: var(--lexi-muted);
+
+
+}
+
+.cover-line {
+
+
+width: 100%;
+
+height: 1px;
+
+background: var(--lexi-line);
+
+
+}
+
+/* =========================================================
+CONTACT DETAILS
 ========================================================= */
 
 .contact-details {
 
-    padding: 100px 7%;
 
-    background: #ffffff;
+padding:
+    var(--section-space)
+    var(--page-padding);
+
+background: var(--lexi-paper);
+
 
 }
 
+.details-intro {
+
+
+width: min(100%, var(--max-width));
+
+margin: 0 auto 7rem;
+
+
+}
+
+.editorial-number {
+
+
+display: block;
+
+margin-bottom: 2rem;
+
+color: var(--lexi-muted);
+
+
+}
+
+.details-intro .contact-kicker {
+
+
+margin-bottom: 1.5rem;
+
+
+}
+
+.details-intro h2 {
+
+
+max-width: 1000px;
+
+font-size:
+    clamp(4rem, 9vw, 9rem);
+
+line-height: 0.8;
+
+text-transform: uppercase;
+
+
+}
+
+.details-intro h2 span {
+
+
+display: block;
+
+margin-left:
+    clamp(2rem, 12vw, 13rem);
+
+color: var(--lexi-burgundy);
+
+font-style: italic;
+
+font-weight: 400;
+
+
+}
+
+.details-description {
+
+
+width: min(100%, 500px);
+
+margin-top: 3rem;
+
+margin-left:
+    clamp(0rem, 12vw, 13rem);
+
+color: #605d56;
+
+line-height: 1.8;
+
+
+}
 
 /* =========================================================
-   HEADING
+CONTACT CHANNELS
 ========================================================= */
 
-.contact-details-heading {
+.contact-channels {
 
-    max-width: 650px;
 
-    margin: 0 auto 55px;
+width: min(100%, var(--max-width));
 
-    text-align: center;
+margin: auto;
+
+border-top:
+    1px solid var(--lexi-line);
+
 
 }
 
-
-.contact-details-heading h2 {
-
-    margin: 0;
-
-    color: #171717;
-
-    font-size: clamp(
-        34px,
-        5vw,
-        56px
-    );
-
-    font-weight: 800;
-
-    line-height: 1.05;
-
-    letter-spacing: -1.5px;
-
-}
+.contact-channel {
 
 
-.contact-details-heading h2 span {
+position: relative;
 
-    color: #550202;
+min-height: 180px;
 
-}
+padding: 2rem 0;
 
+display: grid;
 
-.contact-details-heading p {
+grid-template-columns:
+    70px
+    160px
+    1fr
+    70px;
 
-    max-width: 560px;
+gap: 1.5rem;
 
-    margin: 20px auto 0;
+align-items: center;
 
-    color: #6a6a6a;
+border-bottom:
+    1px solid var(--lexi-line);
 
-    font-size: 15px;
+transition:
+    padding 0.35s ease,
+    background 0.35s ease;
 
-    line-height: 1.8;
 
 }
 
+.contact-channel:hover {
+
+
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+
+background: var(--lexi-burgundy);
+
+color: var(--lexi-bone);
+
+
+}
+
+.channel-index {
+
+
+color: var(--lexi-muted);
+
+
+}
+
+.contact-channel:hover .channel-index {
+
+
+color:
+    rgba(243, 240, 232, 0.55);
+
+
+}
+
+.channel-type {
+
+
+color: var(--lexi-muted);
+
+
+}
+
+.contact-channel:hover .channel-type {
+
+
+color:
+    rgba(243, 240, 232, 0.55);
+
+
+}
+
+.channel-content h3 {
+
+
+margin-bottom: 0.6rem;
+
+font-size:
+    clamp(2rem, 3.5vw, 3.5rem);
+
+line-height: 0.9;
+
+
+}
+
+.channel-content p {
+
+
+color: #656159;
+
+line-height: 1.6;
+
+
+}
+
+.contact-channel:hover .channel-content p {
+
+
+color:
+    rgba(243, 240, 232, 0.7);
+
+
+}
+
+.channel-arrow {
+
+
+color: var(--lexi-burgundy);
+
+font-size: 1.8rem;
+
+transition:
+    transform 0.3s ease;
+
+
+}
+
+.contact-channel:hover .channel-arrow {
+
+
+color: var(--lexi-bone);
+
+transform:
+    translate(5px, -5px);
+
+
+}
+
+.channel-mark {
+
+
+width: 45px;
+height: 45px;
+
+display: grid;
+place-items: center;
+
+border:
+    1px solid var(--lexi-line);
+
+font-family: var(--display);
+
+font-size: 0.7rem;
+
+
+}
+
+.contact-channel:hover .channel-mark {
+
+
+border-color:
+    rgba(243, 240, 232, 0.3);
+
+
+}
 
 /* =========================================================
-   INFORMATION GRID
+CONVERSATION BURGUNDY SECTION
 ========================================================= */
 
-.contact-info-grid {
+.conversation-section {
 
-    display: grid;
 
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+position: relative;
 
-    gap: 18px;
+min-height: 80vh;
 
-    max-width: 1250px;
+padding:
+    var(--section-space)
+    var(--page-padding);
 
-    margin: 0 auto;
+display: grid;
+
+grid-template-columns:
+    0.2fr
+    1fr
+    0.25fr;
+
+gap: 3rem;
+
+align-items: center;
+
+overflow: hidden;
+
+background: var(--lexi-burgundy);
+
+color: var(--lexi-bone);
+
 
 }
 
+.conversation-index {
 
-/* =========================================================
-   INFORMATION CARD
-========================================================= */
 
-.contact-info-card {
+align-self: start;
 
-    min-width: 0;
+font-size: 0.66rem;
 
-    padding: 28px 24px;
+font-weight: 700;
 
-    border: 1px solid rgba(
-        85,
-        2,
-        2,
-        0.09
-    );
+letter-spacing: 0.16em;
 
-    border-radius: 16px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #fcf9f9
-        );
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
 
 }
 
+.conversation-content {
 
-.contact-info-card:hover {
 
-    transform: translateY(-5px);
+position: relative;
 
-    border-color:
-        rgba(85, 2, 2, 0.2);
+z-index: 2;
 
-    box-shadow:
-        0 16px 35px
-        rgba(0, 0, 0, 0.08);
+max-width: 1050px;
+
 
 }
 
+.conversation-content .contact-kicker {
 
-/* =========================================================
-   ICON
-========================================================= */
 
-.contact-icon {
+margin-bottom: 2rem;
 
-    width: 48px;
+color:
+    rgba(243, 240, 232, 0.55);
 
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 22px;
-
-    border-radius: 12px;
-
-    background:
-        rgba(85, 2, 2, 0.07);
-
-    color: #550202;
-
-    font-size: 20px;
 
 }
 
+.conversation-content h2 {
 
-/* =========================================================
-   LABEL
-========================================================= */
 
-.contact-label {
+font-size:
+    clamp(4.5rem, 10vw, 10rem);
 
-    display: block;
+line-height: 0.78;
 
-    margin-bottom: 8px;
+text-transform: uppercase;
 
-    color: #550202;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
 
 }
 
+.conversation-content h2 span {
 
-/* =========================================================
-   TITLE
-========================================================= */
 
-.contact-info-card h3 {
+display: block;
 
-    margin: 0;
+margin-left:
+    clamp(2rem, 12vw, 13rem);
 
-    color: #202020;
+font-style: italic;
 
-    font-size: 17px;
+font-weight: 400;
 
-    font-weight: 750;
-
-    line-height: 1.4;
-
-    overflow-wrap: anywhere;
 
 }
 
+.conversation-description {
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
-.contact-info-card p {
+max-width: 500px;
 
-    margin: 9px 0 0;
+margin-top: 4rem;
 
-    color: #777;
+margin-left:
+    clamp(0rem, 12vw, 13rem);
 
-    font-size: 13px;
+color:
+    rgba(243, 240, 232, 0.65);
 
-    line-height: 1.7;
+line-height: 1.8;
+
 
 }
 
+.conversation-side {
 
-/* =========================================================
-   LARGE TABLET
-========================================================= */
 
-@media (max-width: 1050px) {
+align-self: end;
 
-    .contact-info-grid {
+display: flex;
 
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+flex-direction: column;
 
-    }
+gap: 0.5rem;
+
+color:
+    rgba(243, 240, 232, 0.42);
+
+font-size: 0.6rem;
+
+font-weight: 700;
+
+letter-spacing: 0.16em;
+
 
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .contact-details {
-
-        padding: 75px 20px;
-
-    }
+.conversation-section::after {
 
 
-    .contact-details-heading {
+content: "LC";
 
-        margin-bottom: 38px;
+position: absolute;
 
-    }
+right: -4vw;
+bottom: -12vw;
 
+font-family: var(--display);
 
-    .contact-details-heading h2 {
+font-size:
+    clamp(18rem, 40vw, 42rem);
 
-        font-size: 38px;
+line-height: 0.7;
 
-    }
+font-weight: 700;
 
+letter-spacing: -0.12em;
 
-    .contact-details-heading p {
+color:
+    rgba(243, 240, 232, 0.035);
 
-        font-size: 14px;
-
-    }
-
-
-    .contact-info-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-
-    }
-
-
-    .contact-info-card {
-
-        display: flex;
-
-        align-items: flex-start;
-
-        gap: 17px;
-
-        padding: 22px 20px;
-
-    }
-
-
-    .contact-icon {
-
-        flex: 0 0 44px;
-
-        width: 44px;
-
-        height: 44px;
-
-        margin-bottom: 0;
-
-        font-size: 18px;
-
-    }
 
 }
 
 /* =========================================================
-   CONTACT FORM SECTION
+FORM SECTION
 ========================================================= */
 
 .contact-form-section {
 
-    display: grid;
 
-    grid-template-columns:
-        minmax(260px, 0.75fr)
-        minmax(0, 1.25fr);
+padding:
+    var(--section-space)
+    var(--page-padding);
 
-    gap: 70px;
+background: var(--lexi-bone);
 
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 100px 7%;
 
 }
 
+.form-heading {
+
+
+width: min(100%, var(--max-width));
+
+margin: auto auto 6rem;
+
+
+}
+
+.form-heading .contact-kicker {
+
+
+margin-bottom: 1.5rem;
+
+
+}
+
+.form-heading h2 {
+
+
+max-width: 1000px;
+
+font-size:
+    clamp(4rem, 9vw, 9rem);
+
+line-height: 0.8;
+
+text-transform: uppercase;
+
+
+}
+
+.form-heading h2 span {
+
+
+display: block;
+
+margin-left:
+    clamp(2rem, 12vw, 13rem);
+
+color: var(--lexi-burgundy);
+
+font-style: italic;
+
+font-weight: 400;
+
+
+}
+
+.form-heading > p:last-child {
+
+
+max-width: 450px;
+
+margin-top: 3rem;
+
+margin-left:
+    clamp(0rem, 12vw, 13rem);
+
+color: #656159;
+
+line-height: 1.8;
+
+
+}
 
 /* =========================================================
-   FORM INTRO
-========================================================= */
-
-.contact-form-intro {
-
-    padding-top: 10px;
-
-}
-
-
-.contact-form-intro h2 {
-
-    margin: 0;
-
-    color: #171717;
-
-    font-size: clamp(
-        34px,
-        4vw,
-        52px
-    );
-
-    font-weight: 800;
-
-    line-height: 1.08;
-
-    letter-spacing: -1.5px;
-
-}
-
-
-.contact-form-intro h2 span {
-
-    display: block;
-
-    color: #550202;
-
-}
-
-
-.contact-form-intro p {
-
-    max-width: 430px;
-
-    margin-top: 22px;
-
-    color: #6d6d6d;
-
-    font-size: 15px;
-
-    line-height: 1.8;
-
-}
-
-
-/* =========================================================
-   FORM
+FORM
 ========================================================= */
 
 .contact-form {
 
-    padding: 34px;
 
-    border: 1px solid
-        rgba(85, 2, 2, 0.09);
+width: min(100%, var(--max-width));
 
-    border-radius: 20px;
+margin: auto;
 
-    background: #ffffff;
-
-    box-shadow:
-        0 20px 50px
-        rgba(0, 0, 0, 0.06);
 
 }
 
+.form-top-line {
 
-/* =========================================================
-   ROW
-========================================================= */
 
-.contact-form .form-row {
+display: flex;
 
-    display: grid;
+justify-content: space-between;
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+padding: 1rem 0;
 
-    gap: 16px;
+border-top:
+    1px solid var(--lexi-line);
+
+border-bottom:
+    1px solid var(--lexi-line);
+
+color: var(--lexi-muted);
+
 
 }
 
+.form-row {
 
-/* =========================================================
-   FORM GROUP
-========================================================= */
 
-.contact-form .form-group {
+display: grid;
 
-    margin-bottom: 20px;
+grid-template-columns: 1fr 1fr;
+
+gap: clamp(2rem, 6vw, 7rem);
+
 
 }
 
+.form-group {
 
-.contact-form label {
 
-    display: block;
+position: relative;
 
-    margin-bottom: 8px;
+margin-top: 3rem;
 
-    color: #282828;
-
-    font-size: 12px;
-
-    font-weight: 700;
 
 }
 
+.form-group label {
 
-/* =========================================================
-   INPUTS
-========================================================= */
 
-.contact-form input,
-.contact-form textarea {
+display: block;
 
-    width: 100%;
+margin-bottom: 1rem;
 
-    box-sizing: border-box;
+color: var(--lexi-muted);
 
-    border: 1px solid
-        rgba(0, 0, 0, 0.12);
+font-size: 0.65rem;
 
-    border-radius: 10px;
+font-weight: 700;
 
-    background: #fafafa;
+letter-spacing: 0.14em;
 
-    color: #202020;
+text-transform: uppercase;
 
-    font-family: inherit;
-
-    font-size: 14px;
-
-    outline: none;
-
-    transition:
-        border-color 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
 
 }
 
+.form-group input,
+.form-group textarea {
 
-.contact-form input {
 
-    min-height: 48px;
+width: 100%;
 
-    padding: 0 14px;
+padding:
+    0 0 1.1rem;
+
+border: 0;
+
+border-bottom:
+    1px solid var(--lexi-line);
+
+outline: none;
+
+border-radius: 0;
+
+background: transparent;
+
+color: var(--lexi-black);
+
+font-family: var(--body);
+
+font-size: 1.05rem;
+
+transition:
+    border-color 0.25s ease;
+
 
 }
 
+.form-group textarea {
 
-.contact-form textarea {
 
-    min-height: 150px;
+min-height: 210px;
 
-    padding: 13px 14px;
+resize: vertical;
 
-    resize: vertical;
+line-height: 1.7;
 
-    line-height: 1.6;
 
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
 
-    color: #999;
+color: #aaa59c;
+
 
 }
 
+.form-group input:focus,
+.form-group textarea:focus {
 
-/* =========================================================
-   FOCUS
-========================================================= */
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+border-bottom-color:
+    var(--lexi-burgundy);
 
-    border-color: #550202;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 0 0 3px
-        rgba(85, 2, 2, 0.07);
 
 }
 
+.form-error {
 
-/* =========================================================
-   ERROR
-========================================================= */
 
-.contact-form .form-error {
+display: block;
 
-    display: block;
+min-height: 1rem;
 
-    min-height: 16px;
+margin-top: 0.5rem;
 
-    margin-top: 5px;
+color: var(--lexi-burgundy);
 
-    color: #b00020;
+font-size: 0.7rem;
 
-    font-size: 11px;
 
 }
-
-
-.contact-form
-.form-group.has-error input,
-.contact-form
-.form-group.has-error textarea {
-
-    border-color: #b00020;
-
-}
-
-
-/* =========================================================
-   MESSAGE COUNTER
-========================================================= */
 
 .message-meta {
 
-    display: flex;
 
-    align-items: flex-start;
+display: flex;
 
-    justify-content: space-between;
+justify-content: space-between;
+
+align-items: center;
+
+min-height: 1.2rem;
+
+margin-top: 0.4rem;
+
+color: var(--lexi-muted);
+
 
 }
 
+.form-submit-area {
 
-#messageCount {
 
-    color: #999;
+margin-top: 4rem;
 
-    font-size: 11px;
+padding-top: 2rem;
+
+display: flex;
+
+justify-content: space-between;
+
+gap: 3rem;
+
+align-items: center;
+
+border-top:
+    1px solid var(--lexi-line);
+
 
 }
 
+.form-submit-area > p {
+
+
+max-width: 360px;
+
+color: var(--lexi-muted);
+
+font-size: 0.75rem;
+
+line-height: 1.7;
+
+
+}
+
+.contact-submit-btn {
+
+
+position: relative;
+
+min-width: 250px;
+
+min-height: 65px;
+
+padding: 0 2rem;
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 2rem;
+
+border: 0;
+
+border-radius: 0;
+
+background: var(--lexi-burgundy);
+
+color: var(--lexi-bone);
+
+cursor: pointer;
+
+font-size: 0.7rem;
+
+font-weight: 700;
+
+letter-spacing: 0.13em;
+
+text-transform: uppercase;
+
+transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+
+
+}
+
+.contact-submit-btn:hover {
+
+
+background: var(--lexi-burgundy-dark);
+
+transform:
+    translateY(-3px);
+
+
+}
+
+.submit-arrow {
+
+
+font-size: 1.2rem;
+
+
+}
+
+.submit-loading {
+
+
+display: none;
+
+
+}
+
+.contact-submit-btn.is-loading
+.submit-text {
+
+
+display: none;
+
+
+}
+
+.contact-submit-btn.is-loading
+.submit-loading {
+
+
+display: inline;
+
+
+}
+
+.form-status {
+
+
+margin-top: 1.5rem;
+
+min-height: 1.5rem;
+
+font-size: 0.8rem;
+
+
+}
 
 /* =========================================================
-   SUBMIT BUTTON
+QUICK HELP
 ========================================================= */
+
+.quick-help {
+
+
+padding:
+    var(--section-space)
+    var(--page-padding);
+
+background: var(--lexi-paper);
+
+
+}
+
+.quick-help-heading {
+
+
+width: min(100%, var(--max-width));
+
+margin: auto auto 6rem;
+
+
+}
+
+.quick-help-heading .contact-kicker {
+
+
+margin-bottom: 1.5rem;
+
+
+}
+
+.quick-help-heading h2 {
+
+
+max-width: 1000px;
+
+font-size:
+    clamp(4rem, 9vw, 9rem);
+
+line-height: 0.8;
+
+text-transform: uppercase;
+
+
+}
+
+.quick-help-heading h2 span {
+
+
+display: block;
+
+margin-left:
+    clamp(2rem, 12vw, 13rem);
+
+color: var(--lexi-burgundy);
+
+font-style: italic;
+
+font-weight: 400;
+
+
+}
+
+.help-list {
+
+
+width: min(100%, var(--max-width));
+
+margin: auto;
+
+border-top:
+    1px solid var(--lexi-line);
+
+
+}
+
+.help-item {
+
+
+border-bottom:
+    1px solid var(--lexi-line);
+
+
+}
+
+.help-item summary {
+
+
+min-height: 120px;
+
+padding: 1.5rem 0;
+
+display: grid;
+
+grid-template-columns:
+    80px
+    1fr
+    50px;
+
+align-items: center;
+
+cursor: pointer;
+
+list-style: none;
+
+
+}
+
+.help-item summary::-webkit-details-marker {
+display: none;
+}
+
+.help-item summary > span {
+
+
+color: var(--lexi-muted);
+
+font-size: 0.65rem;
+
+font-weight: 700;
+
+letter-spacing: 0.15em;
+
+
+}
+
+.help-item summary strong {
+
+
+font-family: var(--display);
+
+font-size:
+    clamp(1.6rem, 3vw, 3rem);
+
+line-height: 1;
+
+letter-spacing: -0.04em;
+
+
+}
+
+.help-item summary i {
+
+
+width: 40px;
+height: 40px;
+
+display: grid;
+
+place-items: center;
+
+border:
+    1px solid var(--lexi-line);
+
+color: var(--lexi-burgundy);
+
+font-style: normal;
+
+font-size: 1.2rem;
+
+transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+
+
+}
+
+.help-item[open] summary i {
+
+
+transform: rotate(45deg);
+
+background: var(--lexi-burgundy);
+
+color: var(--lexi-bone);
+
+
+}
+
+.help-answer {
+
+
+padding:
+    0 50px 2.5rem 80px;
+
+
+}
+
+.help-answer p {
+
+
+max-width: 650px;
+
+color: #656159;
+
+line-height: 1.8;
+
+
+}
+
+/* =========================================================
+TRUST
+========================================================= */
+
+.trust-section {
+
+
+padding:
+    2rem
+    var(--page-padding)
+    var(--section-space);
+
+background: var(--lexi-black);
+
+color: var(--lexi-bone);
+
+
+}
+
+.trust-top {
+
+
+display: flex;
+
+justify-content: space-between;
+
+padding-bottom: 1.5rem;
+
+border-bottom:
+    1px solid var(--lexi-light-line);
+
+color:
+    rgba(243, 240, 232, 0.45);
+
+
+}
+
+.trust-grid {
+
+
+width: min(100%, var(--max-width));
+
+margin: 5rem auto 0;
+
+display: grid;
+
+grid-template-columns:
+    repeat(4, 1fr);
+
+
+}
+
+.trust-item {
+
+
+min-height: 300px;
+
+padding: 2rem;
+
+border-right:
+    1px solid var(--lexi-light-line);
+
+
+}
+
+.trust-item:last-of-type {
+
+
+border-right: 0;
+
+
+}
+
+.trust-item > span {
+
+
+color:
+    rgba(243, 240, 232, 0.4);
+
+font-size: 0.7rem;
+
+
+}
+
+.trust-item h3 {
+
+
+margin-top: 5rem;
+
+font-size:
+    clamp(2rem, 4vw, 4rem);
+
+line-height: 0.9;
+
+
+}
+
+.trust-item p {
+
+
+max-width: 230px;
+
+margin-top: 1.5rem;
+
+color:
+    rgba(243, 240, 232, 0.5);
+
+line-height: 1.7;
+
+
+}
+
+.trust-statement {
+
+
+min-height: 300px;
+
+padding: 2rem;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+background: var(--lexi-burgundy);
+
+
+}
+
+.trust-statement > span {
+
+
+font-family: var(--display);
+
+font-size: 4rem;
+
+font-weight: 700;
+
+line-height: 0.7;
+
+
+}
+
+.trust-statement p {
+
+
+max-width: 250px;
+
+font-family: var(--display);
+
+font-size: 1.2rem;
+
+line-height: 1;
+
+
+}
+
+/* =========================================================
+FINAL
+========================================================= */
+
+.contact-final {
+
+
+position: relative;
+
+min-height: 85vh;
+
+padding:
+    2rem
+    var(--page-padding)
+    3rem;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: space-between;
+
+overflow: hidden;
+
+background: var(--lexi-burgundy);
+
+color: var(--lexi-bone);
+
+
+}
+
+.final-label {
+
+
+padding-bottom: 1.5rem;
+
+border-bottom:
+    1px solid var(--lexi-light-line);
+
+color:
+    rgba(243, 240, 232, 0.5);
+
+
+}
+
+.final-main {
+
+
+position: relative;
+
+z-index: 2;
+
+width: min(100%, 1200px);
+
+margin: auto 0;
+
+
+}
+
+.final-main .contact-kicker {
+
+
+margin-bottom: 2rem;
+
+color:
+    rgba(243, 240, 232, 0.55);
+
+
+}
+
+.final-main h2 {
+
+
+font-size:
+    clamp(5rem, 12vw, 13rem);
+
+line-height: 0.72;
+
+text-transform: uppercase;
+
+
+}
+
+.final-main h2 span {
+
+
+display: block;
+
+margin-left:
+    clamp(2rem, 12vw, 13rem);
+
+font-style: italic;
+
+font-weight: 400;
+
+
+}
+
+.final-main > p {
+
+
+max-width: 450px;
+
+margin-top: 3rem;
+
+margin-left:
+    clamp(0rem, 12vw, 13rem);
+
+color:
+    rgba(243, 240, 232, 0.65);
+
+line-height: 1.8;
+
+
+}
+
+.final-email {
+
+
+width: fit-content;
+
+display: flex;
+
+align-items: center;
+
+gap: 1.5rem;
+
+margin-top: 2rem;
+
+margin-left:
+    clamp(0rem, 12vw, 13rem);
+
+padding-bottom: 0.7rem;
+
+border-bottom:
+    1px solid var(--lexi-bone);
+
+font-family: var(--display);
+
+font-size:
+    clamp(1.3rem, 3vw, 2.5rem);
+
+letter-spacing: -0.03em;
+
+
+}
+
+.final-email span {
+
+
+font-family: var(--body);
+
+font-size: 1rem;
+
+
+}
+
+.final-brand-mark {
+
+
+position: absolute;
+
+right: var(--page-padding);
+
+bottom: -3rem;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: flex-end;
+
+font-family: var(--display);
+
+font-size:
+    clamp(5rem, 12vw, 13rem);
+
+line-height: 0.68;
+
+letter-spacing: -0.1em;
+
+font-weight: 700;
+
+color:
+    rgba(243, 240, 232, 0.055);
+
+
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+
+.contact-cover-main {
+
+    grid-template-columns: 1fr;
+
+    gap: 5rem;
+
+}
+
+
+.contact-object {
+
+    width: min(70%, 400px);
+
+}
+
+
+.conversation-section {
+
+    grid-template-columns:
+        80px
+        1fr;
+
+}
+
+
+.conversation-side {
+
+    display: none;
+
+}
+
+
+.trust-grid {
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+}
+
+
+.trust-item:nth-child(2) {
+
+    border-right: 0;
+
+}
+
+
+.trust-item:nth-child(1),
+.trust-item:nth-child(2) {
+
+    border-bottom:
+        1px solid var(--lexi-light-line);
+
+}
+
+
+.trust-statement {
+
+    grid-column: span 2;
+
+}
+
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+:root {
+
+    --page-padding: 1.1rem;
+
+    --section-space: 5.5rem;
+
+}
+
+
+/* COVER */
+
+.contact-cover {
+
+    min-height: auto;
+
+}
+
+
+.contact-cover-main {
+
+    margin-top: 5rem;
+
+}
+
+
+.cover-copy h1 {
+
+    font-size:
+        clamp(4.8rem, 21vw, 7rem);
+
+}
+
+
+.cover-copy h1 span {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.cover-description {
+
+    margin-left: 1.2rem;
+
+    margin-top: 2.5rem;
+
+}
+
+
+.cover-scroll {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.contact-object {
+
+    width: 75%;
+
+    aspect-ratio: 0.72;
+
+}
+
+
+.object-side {
+
+    right: -3rem;
+
+}
+
+
+.cover-footer {
+
+    margin-top: 5rem;
+
+}
+
+
+/* DETAILS */
+
+.details-intro {
+
+    margin-bottom: 4rem;
+
+}
+
+
+.details-intro h2 {
+
+    font-size:
+        clamp(3.8rem, 18vw, 6rem);
+
+}
+
+
+.details-intro h2 span {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.details-description {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.contact-channel {
+
+    min-height: 150px;
+
+    grid-template-columns:
+        45px
+        1fr
+        40px;
+
+    gap: 1rem;
+
+}
+
+
+.channel-type {
+
+    grid-column: 2;
+
+    grid-row: 1;
+
+}
+
+
+.channel-content {
+
+    grid-column: 2;
+
+    grid-row: 2;
+
+}
+
+
+.channel-index {
+
+    grid-column: 1;
+
+    grid-row: 1;
+
+}
+
+
+.channel-arrow,
+.channel-mark {
+
+    grid-column: 3;
+
+    grid-row: 1;
+
+}
+
+
+.channel-content h3 {
+
+    font-size: 2rem;
+
+}
+
+
+.contact-channel:hover {
+
+    padding-left: 0.7rem;
+
+    padding-right: 0.7rem;
+
+}
+
+
+/* CONVERSATION */
+
+.conversation-section {
+
+    min-height: 75vh;
+
+    display: block;
+
+}
+
+
+.conversation-index {
+
+    margin-bottom: 5rem;
+
+}
+
+
+.conversation-content h2 {
+
+    font-size:
+        clamp(3.8rem, 18vw, 6.5rem);
+
+}
+
+
+.conversation-content h2 span {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.conversation-description {
+
+    margin-left: 1.2rem;
+
+}
+
+
+/* FORM */
+
+.form-heading h2 {
+
+    font-size:
+        clamp(3.8rem, 18vw, 6rem);
+
+}
+
+
+.form-heading h2 span {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.form-heading > p:last-child {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.form-row {
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+}
+
+
+.form-submit-area {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+}
+
+
+.form-submit-area > p {
+
+    max-width: none;
+
+}
+
 
 .contact-submit-btn {
 
     width: 100%;
 
-    min-height: 50px;
+}
 
-    border: none;
 
-    border-radius: 10px;
+/* HELP */
 
-    background: #550202;
+.quick-help-heading h2 {
 
-    color: #ffffff;
-
-    font-family: inherit;
-
-    font-size: 13px;
-
-    font-weight: 750;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
+    font-size:
+        clamp(3.8rem, 18vw, 6rem);
 
 }
 
 
-.contact-submit-btn:hover {
+.quick-help-heading h2 span {
 
-    transform: translateY(-2px);
-
-    background: #3f0101;
-
-    box-shadow:
-        0 12px 25px
-        rgba(85, 2, 2, 0.18);
+    margin-left: 1.2rem;
 
 }
 
 
-.contact-submit-btn:disabled {
-
-    opacity: 0.65;
-
-    cursor: not-allowed;
-
-    transform: none;
-
-}
-
-
-/* =========================================================
-   LOADING STATE
-========================================================= */
-
-.submit-loading {
-
-    display: none;
-
-}
-
-
-.contact-submit-btn.loading .submit-text {
-
-    display: none;
-
-}
-
-
-.contact-submit-btn.loading .submit-loading {
-
-    display: inline;
-
-}
-
-
-/* =========================================================
-   STATUS
-========================================================= */
-
-.form-status {
-
-    min-height: 20px;
-
-    margin: 15px 0 0;
-
-    text-align: center;
-
-    font-size: 12px;
-
-}
-
-
-.form-status.success {
-
-    color: #287a3e;
-
-}
-
-
-.form-status.error {
-
-    color: #b00020;
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 850px) {
-
-    .contact-form-section {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-        padding: 80px 6%;
-
-    }
-
-
-    .contact-form-intro {
-
-        text-align: center;
-
-    }
-
-
-    .contact-form-intro p {
-
-        margin-left: auto;
-
-        margin-right: auto;
-
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .contact-form-section {
-
-        padding: 65px 20px;
-
-    }
-
-
-    .contact-form {
-
-        padding: 22px 18px;
-
-        border-radius: 16px;
-
-    }
-
-
-    .contact-form .form-row {
-
-        grid-template-columns: 1fr;
-
-        gap: 0;
-
-    }
-
-
-    .contact-form-intro h2 {
-
-        font-size: 36px;
-
-    }
-
-
-    .contact-form-intro p {
-
-        font-size: 14px;
-
-    }
-
-}
-
-
-/* =========================================================
-   PART 4 — CONTACT TRUST SECTION
-========================================================= */
-
-.contact-trust {
-
-    padding: 105px 7%;
-
-    background:
-        linear-gradient(
-            145deg,
-            #faf7f7 0%,
-            #ffffff 50%,
-            #f8f3f3 100%
-        );
-
-    border-top: 1px solid
-        rgba(85, 2, 2, 0.06);
-
-}
-
-
-/* =========================================================
-   HEADING
-========================================================= */
-
-.contact-trust-heading {
-
-    max-width: 680px;
-
-    margin: 0 auto 55px;
-
-    text-align: center;
-
-}
-
-
-.contact-trust-heading h2 {
-
-    margin: 0;
-
-    color: #171717;
-
-    font-size: clamp(
-        34px,
-        5vw,
-        56px
-    );
-
-    font-weight: 800;
-
-    line-height: 1.05;
-
-    letter-spacing: -1.5px;
-
-}
-
-
-.contact-trust-heading h2 span {
-
-    color: #550202;
-
-}
-
-
-.contact-trust-heading p {
-
-    max-width: 590px;
-
-    margin: 20px auto 0;
-
-    color: #6c6c6c;
-
-    font-size: 15px;
-
-    line-height: 1.8;
-
-}
-
-
-/* =========================================================
-   TRUST GRID
-========================================================= */
-
-.contact-trust-grid {
-
-    display: grid;
+.help-item summary {
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        45px
+        1fr
+        35px;
 
-    gap: 20px;
-
-    max-width: 1150px;
-
-    margin: 0 auto;
+    min-height: 100px;
 
 }
 
+
+.help-item summary strong {
+
+    font-size: 1.5rem;
+
+}
+
+
+.help-answer {
+
+    padding:
+        0
+        1rem
+        2rem
+        45px;
+
+}
+
+
+/* TRUST */
+
+.trust-grid {
+
+    grid-template-columns: 1fr;
+
+}
+
+
+.trust-item {
+
+    min-height: 250px;
+
+    border-right: 0;
+
+    border-bottom:
+        1px solid var(--lexi-light-line);
+
+}
+
+
+.trust-item h3 {
+
+    margin-top: 3rem;
+
+}
+
+
+.trust-statement {
+
+    grid-column: auto;
+
+    min-height: 260px;
+
+}
+
+
+/* FINAL */
+
+.contact-final {
+
+    min-height: 75vh;
+
+}
+
+
+.final-main h2 {
+
+    font-size:
+        clamp(4.5rem, 20vw, 7rem);
+
+}
+
+
+.final-main h2 span {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.final-main > p {
+
+    margin-left: 1.2rem;
+
+}
+
+
+.final-email {
+
+    margin-left: 1.2rem;
+
+    font-size: 1.15rem;
+
+}
+
+
+.final-brand-mark {
+
+    font-size: 25vw;
+
+    bottom: 0;
+
+}
+
+
+}
 
 /* =========================================================
-   TRUST CARD
+VERY SMALL DEVICES
 ========================================================= */
 
-.contact-trust-card {
+@media (max-width: 420px) {
 
-    position: relative;
+.cover-copy h1,
+.details-intro h2,
+.conversation-content h2,
+.form-heading h2,
+.quick-help-heading h2,
+.final-main h2 {
 
-    min-height: 270px;
-
-    padding: 32px 28px;
-
-    overflow: hidden;
-
-    border: 1px solid
-        rgba(85, 2, 2, 0.09);
-
-    border-radius: 18px;
-
-    background: rgba(
-        255,
-        255,
-        255,
-        0.82
-    );
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
+    font-size: 3.7rem;
 
 }
 
 
-.contact-trust-card:hover {
+.contact-object {
 
-    transform: translateY(-6px);
-
-    border-color:
-        rgba(85, 2, 2, 0.18);
-
-    box-shadow:
-        0 18px 40px
-        rgba(0, 0, 0, 0.07);
+    width: 82%;
 
 }
 
+
+.channel-content h3 {
+
+    font-size: 1.7rem;
+
+}
+
+
+}
 
 /* =========================================================
-   NUMBER
+ACCESSIBILITY / REDUCED MOTION
 ========================================================= */
 
-.trust-number {
+@media (prefers-reduced-motion: reduce) {
 
-    position: absolute;
 
-    top: 22px;
+.lexi-contact *,
+.lexi-contact *::before,
+.lexi-contact *::after {
 
-    right: 24px;
+    scroll-behavior: auto !important;
 
-    color:
-        rgba(85, 2, 2, 0.10);
+    animation: none !important;
 
-    font-size: 42px;
-
-    font-weight: 900;
-
-    line-height: 1;
+    transition: none !important;
 
 }
 
-
-/* =========================================================
-   ICON
-========================================================= */
-
-.trust-icon {
-
-    width: 48px;
-
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 25px;
-
-    border-radius: 12px;
-
-    background: #550202;
-
-    color: #ffffff;
-
-    font-size: 18px;
-
-    box-shadow:
-        0 8px 20px
-        rgba(85, 2, 2, 0.16);
-
-}
-
-
-/* =========================================================
-   TITLE
-========================================================= */
-
-.contact-trust-card h3 {
-
-    margin: 0;
-
-    color: #202020;
-
-    font-size: 18px;
-
-    font-weight: 750;
-
-}
-
-
-/* =========================================================
-   TEXT
-========================================================= */
-
-.contact-trust-card p {
-
-    margin: 12px 0 0;
-
-    color: #737373;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 850px) {
-
-    .contact-trust {
-
-        padding: 80px 6%;
-
-    }
-
-
-    .contact-trust-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-    }
-
-
-    .contact-trust-card:last-child {
-
-        grid-column: 1 / -1;
-
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .contact-trust {
-
-        padding: 70px 20px;
-
-    }
-
-
-    .contact-trust-heading {
-
-        margin-bottom: 38px;
-
-    }
-
-
-    .contact-trust-heading h2 {
-
-        font-size: 37px;
-
-    }
-
-
-    .contact-trust-heading p {
-
-        font-size: 14px;
-
-    }
-
-
-    .contact-trust-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-
-    }
-
-
-    .contact-trust-card {
-
-        min-height: auto;
-
-        padding: 27px 22px;
-
-    }
-
-
-    .contact-trust-card:last-child {
-
-        grid-column: auto;
-
-    }
 
 }
