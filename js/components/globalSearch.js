@@ -456,7 +456,7 @@ result.innerHTML = `
     openProduct(productId) {
 
         window.location.href =
-            `../html/productDetail.html?id=${productId}`;
+            `./html/productDetail.html?id=${productId}`;
 
     }
 
@@ -536,7 +536,7 @@ openSearchPage() {
 
 
     window.location.href =
-        `../html/search.html?q=${encodeURIComponent(query)}`;
+        `./html/search.html?q=${encodeURIComponent(query)}`;
 
 }
 
