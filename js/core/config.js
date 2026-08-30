@@ -1,28 +1,32 @@
 // LexiCloth Configuration
 
+// LexiCloth Configuration
+
+const BASE_PATH = "/lexiCloth";
+
 export const CONFIG = {
 
     APP_NAME: "lexiCloth",
 
-    VERSION:  "2.0.0",
+    VERSION: "2.0.0",
 
     CURRENCY: "₦",
 
-       PATHS: {
+    PATHS: {
 
-        IMAGES: "/images/",
+        IMAGES: `${BASE_PATH}/images/`,
 
-        PRODUCT_DETAILS: "/html/productDetail.html",
+        PRODUCT_DETAILS: `${BASE_PATH}/html/productDetail.html`,
 
-        SHOP: "/html/shop.html",
+        SHOP: `${BASE_PATH}/html/shop.html`,
 
-        WISHLIST: "/html/wishlist.html",
+        WISHLIST: `${BASE_PATH}/html/wishlist.html`,
 
-        CART: "/html/cart.html"
+        CART: `${BASE_PATH}/html/cart.html`
 
     },
 
-       STORAGE: {
+    STORAGE: {
 
         CART: "lexicloth_cart",
 
