@@ -1,5 +1,6 @@
 import searchService from "../services/searchService.js";
 
+import { CONFIG } from "../core/config.js";
 
 class GlobalSearch {
 
