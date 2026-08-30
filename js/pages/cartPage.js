@@ -56,12 +56,7 @@ function renderCart(cart) {
 
         `;
 
-       const continueShopping =
-    document.getElementById("continue-shopping");
 
-if (continueShopping) {
-    continueShopping.href = CONFIG.PATHS.SHOP;
-}
 
       
 
@@ -136,6 +131,12 @@ data-color="${product.color ?? ""}"
     });
 
 
+           const continueShopping =
+    document.getElementById("continue-shopping");
+
+if (continueShopping) {
+    continueShopping.href = CONFIG.PATHS.SHOP;
+}
 
 }
 
