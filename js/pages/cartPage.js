@@ -46,7 +46,7 @@ function renderCart(cart) {
 
                 <p>You haven't added any products yet.</p>
 
-                <a href="/html/shop.html" class="continue-shopping">
+                <a href="#" class="continue-shopping">
 
                     Continue Shopping
 
@@ -56,7 +56,12 @@ function renderCart(cart) {
 
         `;
 
-        
+       const continueShopping =
+    document.getElementById("continue-shopping");
+
+if (continueShopping) {
+    continueShopping.href = CONFIG.PATHS.SHOP;
+}
 
       
 
