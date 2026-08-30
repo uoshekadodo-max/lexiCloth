@@ -131,13 +131,15 @@ data-color="${product.color ?? ""}"
     });
 
 
-//            const continueShopping =
-//     document.getElementById("continue-shopping");
 
-// if (continueShopping) {
-//     continueShopping.href = CONFIG.PATHS.SHOP;
-// }
+}
 
+
+           const continueShopping =
+    document.getElementById("continue-shopping");
+
+if (continueShopping) {
+    continueShopping.href = CONFIG.PATHS.SHOP;
 }
 
   const checkoutButton = document.getElementById("checkout-btn")
