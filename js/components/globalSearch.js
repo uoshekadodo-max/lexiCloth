@@ -453,13 +453,12 @@ result.innerHTML = `
     // OPEN PRODUCT
     // ==============================
 
-    openProduct(productId) {
+ openProduct(productId) {
 
-        window.location.href =
-            `./html/productDetail.html?id=${productId}`;
+    window.location.href =
+        `${CONFIG.PATHS.PRODUCT_DETAILS}?id=${productId}`;
 
-    }
-
+}
 
     // ==============================
     // OPEN
@@ -535,8 +534,8 @@ openSearchPage() {
     if (!query) return;
 
 
-    window.location.href =
-        `./html/search.html?q=${encodeURIComponent(query)}`;
+  window.location.href =
+    `${CONFIG.PATHS.SEARCH}?q=${encodeURIComponent(query)}`;
 
 }
 

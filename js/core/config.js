@@ -17,6 +17,8 @@ export const CONFIG = {
         IMAGES: `${BASE_PATH}/images/`,
 
         PRODUCT_DETAILS: `${BASE_PATH}/html/productDetail.html`,
+        
+        SEARCH: `${BASE_PATH}/html/search.html`,
 
         SHOP: `${BASE_PATH}/html/shop.html`,
 
