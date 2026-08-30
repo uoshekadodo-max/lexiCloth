@@ -371,6 +371,7 @@ function initializePayment() {
 
 }
 
+
 function updatePaymentUI() {
 
     const content = document.getElementById(
@@ -527,6 +528,7 @@ function updatePaymentUI() {
 
 }
 
+
 async function completeOrder() {
 
     console.log("completeOrder started");
@@ -673,6 +675,7 @@ function calculateSubtotal() {
     );
 
 }
+
 
 function calculateTax() {
 
