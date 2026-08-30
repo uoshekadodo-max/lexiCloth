@@ -1,5 +1,5 @@
 import cartService from "../services/cartService.js";
-
+import toast from "../components/toast.js";
 
 
 const cartContainer = document.getElementById("cart-items");
