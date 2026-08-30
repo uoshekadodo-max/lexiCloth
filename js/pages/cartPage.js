@@ -46,7 +46,7 @@ function renderCart(cart) {
 
                 <p>You haven't added any products yet.</p>
 
-                <a href="#" class="continue-shopping">
+                <a href="./html/shop.html" class="continue-shopping">
 
                     Continue Shopping
 
@@ -131,12 +131,12 @@ data-color="${product.color ?? ""}"
     });
 
 
-           const continueShopping =
-    document.getElementById("continue-shopping");
+//            const continueShopping =
+//     document.getElementById("continue-shopping");
 
-if (continueShopping) {
-    continueShopping.href = CONFIG.PATHS.SHOP;
-}
+// if (continueShopping) {
+//     continueShopping.href = CONFIG.PATHS.SHOP;
+// }
 
 }
 
