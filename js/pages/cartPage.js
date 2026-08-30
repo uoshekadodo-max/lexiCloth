@@ -78,7 +78,7 @@ function renderCart(cart) {
 
  <div class="cart-image">
     <img
-        src="${CONFIG.PATHS.IMAGES}${product.images}"
+        src="${CONFIG.PATHS.IMAGES}${product.image}"
         alt="${product.name}"
     >
 </div>
