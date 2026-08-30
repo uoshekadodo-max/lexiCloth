@@ -31,7 +31,7 @@ const response = await fetch(navbarPath);
             await response.text();
 
 
-        await import("./navbar.js");
+        await import("../components/navbar.js");
 
 
         // Initialize global search
