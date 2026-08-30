@@ -46,7 +46,7 @@ function renderCart(cart) {
 
                 <p>You haven't added any products yet.</p>
 
-                <a href="../html/shop.html" class="continue-shopping">
+                <a href="#" class="continue-shopping">
 
                     Continue Shopping
 
