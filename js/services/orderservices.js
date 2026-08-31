@@ -1,4 +1,4 @@
-import Storage from "./storage";
+import Storage from "./storage.js";
 
 const STORAGE_KEY = "lexicloth_orders";
 
