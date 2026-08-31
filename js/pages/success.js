@@ -1,4 +1,4 @@
-
+import orderservices from "../services/orderservices.js";
 
 
 
@@ -28,7 +28,7 @@ function getCurrentOrder() {
 
     if (!orderId) return null;
 
-    const orders = orderService.getOrders();
+    const orders = orderservices.getOrders();
 
     return orders.find(order => order.id === orderId);
 
