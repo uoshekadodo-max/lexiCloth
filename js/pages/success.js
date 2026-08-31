@@ -1,5 +1,6 @@
 import orderservices from "../services/orderservices.js";
 
+import { CONFIG } from "../core/config.js";
 
 
 document.addEventListener("DOMContentLoaded", initSuccess);
@@ -72,9 +73,10 @@ function renderPurchasedItems(order) {
 
             <div class="ordered-product">
 
-                <img
-                    src="/images/${item.image}"
-                    alt="${item.name}">
+                  <img
+                      src="${CONFIG.PATHS.IMAGES}${item.image}"
+                      alt="${item.name}"
+                  >
 
                 <div class="ordered-info">
 
