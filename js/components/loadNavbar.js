@@ -3,19 +3,25 @@ import globalSearch from "./globalSearch.js";
 
 async function loadNavbar() {
 
-    const navbar =
-        document.getElementById("navbar");
+    const navbar = document.getElementById("navbar");
 
     if (!navbar) return;
 
 
     try {
 
-     const navbarPath = window.location.pathname.includes("/html/")
-    ? "./component/navbar.html"
-    : "./html/component/navbar.html";
+        // Determine which folder the current page is in
+        const isHtmlPage =
+            window.location.pathname.includes("/html/");
 
-const response = await fetch(navbarPath);
+
+        // Load the shared navbar
+        const navbarPath = isHtmlPage
+            ? "./component/navbar.html"
+            : "./html/component/navbar.html";
+
+
+        const response = await fetch(navbarPath);
 
 
         if (!response.ok) {
@@ -27,10 +33,40 @@ const response = await fetch(navbarPath);
         }
 
 
-        navbar.innerHTML =
-            await response.text();
+        // Insert navbar HTML
+        navbar.innerHTML = await response.text();
 
 
+        /*
+         * ------------------------------------------------
+         * FIX LOGO PATH
+         * ------------------------------------------------
+         */
+
+        const logo = navbar.querySelector(".logo");
+        const logoImage = logo?.querySelector("img");
+
+
+        if (logo && logoImage) {
+
+            if (isHtmlPage) {
+
+                // Pages inside /html/
+                logo.href = "../index.html";
+                logoImage.src = "../images/logo.webp";
+
+            } else {
+
+                // Homepage
+                logo.href = "./index.html";
+                logoImage.src = "./images/logo.webp";
+
+            }
+
+        }
+
+
+        // Initialize navbar JavaScript
         await import("./navbar.js");
 
 
