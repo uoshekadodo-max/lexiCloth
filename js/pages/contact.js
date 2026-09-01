@@ -1,8 +1,6 @@
-// =========================================================
 // LEXICLOTH CONTACT FORM
 // Frontend validation only
 // Ready for PHP/API connection later
-// =========================================================
 
 const contactForm =
     document.getElementById("contactForm");
@@ -22,9 +20,9 @@ const messageCount =
 
 if (contactForm) {
 
-    // =====================================================
+    // =========
     // MESSAGE COUNTER
-    // =====================================================
+    // =========
 
     if (messageInput && messageCount) {
 
@@ -45,9 +43,9 @@ if (contactForm) {
     }
 
 
-    // =====================================================
+    // =========
     // FORM SUBMISSION
-    // =====================================================
+    // =========
 
     contactForm.addEventListener(
         "submit",
@@ -57,9 +55,7 @@ if (contactForm) {
 }
 
 
-// =========================================================
 // SUBMIT HANDLER
-// =========================================================
 
 function handleContactSubmit(event) {
 
@@ -91,9 +87,9 @@ function handleContactSubmit(event) {
     let valid = true;
 
 
-    // =====================================================
+    // =========
     // NAME
-    // =====================================================
+    // =========
 
     if (name.length < 2) {
 
@@ -107,9 +103,9 @@ function handleContactSubmit(event) {
     }
 
 
-    // =====================================================
+    // =========
     // EMAIL
-    // =====================================================
+    // =========
 
     if (!isValidEmail(email)) {
 
@@ -123,9 +119,9 @@ function handleContactSubmit(event) {
     }
 
 
-    // =====================================================
+    // =========
     // SUBJECT
-    // =====================================================
+    // =========
 
     if (subject.length < 3) {
 
@@ -139,9 +135,9 @@ function handleContactSubmit(event) {
     }
 
 
-    // =====================================================
+    // =========
     // MESSAGE
-    // =====================================================
+    // =========
 
     if (message.length < 10) {
 
@@ -162,12 +158,12 @@ function handleContactSubmit(event) {
     }
 
 
-    // =====================================================
+    // =========
     // TEMPORARY FRONTEND SUCCESS
     //
     // Later this section will become:
     // fetch("/api/contact.php", ...)
-    // =====================================================
+    // =========
 
     submitContactForm({
 
@@ -181,9 +177,7 @@ function handleContactSubmit(event) {
 }
 
 
-// =========================================================
 // TEMPORARY SUBMISSION
-// =========================================================
 
 function submitContactForm(data) {
 
@@ -226,9 +220,7 @@ function submitContactForm(data) {
 }
 
 
-// =========================================================
 // EMAIL VALIDATION
-// =========================================================
 
 function isValidEmail(email) {
 
@@ -238,9 +230,7 @@ function isValidEmail(email) {
 }
 
 
-// =========================================================
 // SHOW ERROR
-// =========================================================
 
 function showFormError(field, message) {
 
@@ -277,9 +267,7 @@ function showFormError(field, message) {
 }
 
 
-// =========================================================
 // CLEAR ERRORS
-// =========================================================
 
 function clearFormErrors() {
 
@@ -307,9 +295,7 @@ function clearFormErrors() {
 }
 
 
-// =========================================================
 // STATUS MESSAGE
-// =========================================================
 
 function setFormStatus(
     message,
@@ -328,9 +314,7 @@ function setFormStatus(
 }
 
 
-// =========================================================
 // LOADING
-// =========================================================
 
 function setLoading(isLoading) {
 
