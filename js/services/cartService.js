@@ -99,24 +99,25 @@ class cart {
     }
 
 
-    remove(id, size, color) {
+   
+   remove(id, size, color) {
 
-        this.items = this.items.filter(item => !(
+    this.items = this.items.filter(item => !(
 
-            item.id === id &&
+        String(item.id) === String(id) &&
 
-            item.size === size &&
+        String(item.size ?? "") === String(size ?? "") &&
 
-            item.color === color
+        String(item.color ?? "") === String(color ?? "")
 
-        ));
+    ));
 
+    this.save();
 
-        this.save();
+    this.notify();
 
-        this.notify();
+}
 
-    }
 
 
     updateQuantity(

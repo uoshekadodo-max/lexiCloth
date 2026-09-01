@@ -246,25 +246,33 @@ function removeItem(e) {
 
     const button = e.currentTarget;
 
+
+
     const item = cartService.getItems().find(product =>
 
         String(product.id) === String(button.dataset.id) &&
 
-        String(product.size) === String(button.dataset.size) &&
+        String(product.size ?? "") === String(button.dataset.size ?? "") &&
 
-        String(product.color) === String(button.dataset.color)
+        String(product.color ?? "") === String(button.dataset.color ?? "")
 
     );
 
-    if (!item) return;
+  
+
+    if (!item) {
+        console.log("NO MATCHING ITEM FOUND");
+        return;
+    }
+
+
 
     cartService.remove(
-
         item.id,
         item.size,
         item.color
-
     );
+
 
     loadCart();
 
